@@ -1,0 +1,27 @@
+<form class="centered-form">
+
+  <div>
+    <label for="correo">Correo:</label>
+    <input type="text" id="correo" name="correo" [(ngModel)]="CorreoFormato.p_Correo" required>
+  </div>
+
+  <div >
+    <label for="P_UsuarioId">ID:</label>
+    <input type="text" id="P_UsuarioId" name="P_UsuarioId" [(ngModel)]="formData.p_UsuarioId" required>
+  </div>
+
+  <div>
+    <label for="P_Usuario">Usuario:</label>
+    <input type="email" id="P_Usuario" name="P_Usuario" [(ngModel)]="formData.p_Usuario" required>
+  </div>
+
+  <div>
+    <label for="P_Password">Contraseña:</label>
+    <input type="password" id="P_Password" name="P_Password" [(ngModel)]="formData.p_Password" required>
+  </div>
+
+  <button type="submit" (click)="submitForm()">Enviar</button>
+
+  <button type="submit" (click)="verificarCorreo()">Verificar Correo</button>
+
+</form>

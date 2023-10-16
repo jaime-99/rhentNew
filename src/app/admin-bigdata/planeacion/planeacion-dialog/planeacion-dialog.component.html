@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>Registro de Planeación</h1>
+
+    <form [formGroup]="form"  autocomplete="off">
+        <div mat-dialog-content> 
+        <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+        <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+     <mat-form-field   appearance="outline" class="w-100">
+                <mat-label>Cliente</mat-label>
+                <mat-select formControlName="clave_cliente"  >
+                    
+                    <mat-option *ngFor="let element of clientes" [value]="element.clave_cliente">
+                        <span>{{element.clave_cliente+" "+ element.nombre_cliente}}</span>
+                    </mat-option>
+                </mat-select> 
+</mat-form-field>
+        </div>
+        </div>
+
+
+        <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+            <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+        <mat-form-field   appearance="outline" class="w-100">
+            <mat-label>Tipo Reporte</mat-label>
+            <mat-select formControlName="id"  >
+                
+                <mat-option *ngFor="let element of tiporeportes" [value]="element.actividad">
+                    <span>{{element.actividad}}</span>
+                </mat-option>
+            </mat-select> 
+        </mat-form-field>
+            </div></div>
+    
+            <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Observaciones</mat-label>
+                <textarea matInput formControlName="observaciones"></textarea>
+                
+            </mat-form-field>
+        </div>
+            </div>
+        </div>
+        
+        <div mat-dialog-actions>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100"> 
+                <button mat-raised-button color="warn" type="button" mat-dialog-close>Cerrar</button>
+                <button mat-raised-button color="primary" (click)="Guardar()">Guardar</button>
+            </div> 
+        </div>
+</form>

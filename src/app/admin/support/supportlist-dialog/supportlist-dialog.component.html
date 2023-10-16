@@ -1,0 +1,83 @@
+
+<form   autocomplete="off">
+    <!-- <form autocomplete="off"> -->
+    <div mat-dialog-content> 
+<div class="p-1">
+    <mat-card class="p-0"> 
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="w-100 p-2">
+            <h2>Tickets Registrados</h2>   
+        </div>
+          <mat-divider></mat-divider>
+          <div fxLayout="row" fxLayoutAlign="space-between center" class="p-1">
+            <div fxLayout="row">
+                <mat-button-toggle-group #controls="matButtonToggleGroup" appearance="legacy" >            
+                    <!-- <mat-button-toggle value="add" (click)="openTicketDialog(null)">
+                        <mat-icon>person_add</mat-icon>
+                    </mat-button-toggle> -->
+                    <mat-button-toggle value="search">
+                        <mat-icon>search</mat-icon>
+                    </mat-button-toggle>           
+                </mat-button-toggle-group>            
+            </div>
+            <form class="user-search" [class.show]="controls.value == 'search'">
+                <mat-form-field class="user-search-input">
+                    <input matInput placeholder="Buscar tiket..." [(ngModel)]="searchText" name="search">
+                </mat-form-field>
+            </form>
+         
+        </div>
+         
+        <mat-divider></mat-divider>
+        <div class="mat-table admin-table">
+            <div class="mat-header-row"> 
+                <div class="mat-header-cell" style="width: 5px;">Id</div>
+                <div class="mat-header-cell">Fecha</div>
+                <div class="mat-header-cell">Categoría</div>
+                <div class="mat-header-cell">Sub Categoría</div>
+                <div class="mat-header-cell">Prioridad</div> 
+                <div class="mat-header-cell">Estatus</div>
+                <div class="mat-header-cell">Detalle</div>  
+                <div class="mat-header-cell">Responsable</div>
+                <div class="mat-header-cell">Respuesta</div>
+                <div class="mat-header-cell"></div>
+            </div>
+            <div *ngFor="let ticket of dataTiket | TiketSearchPipe : searchText | paginate: { itemsPerPage: count, currentPage: page }" class="mat-row"> 
+                <div class="mat-cell"  style="width: 5px;">{{ticket.TiketId}}</div> 
+                <div class="mat-cell">{{ticket.Fecha}}</div> 
+                <div class="mat-cell">{{ticket.Categoria}}</div>
+                <div class="mat-cell">{{ticket.SubCategoria}}</div>
+                <div class="mat-cell">{{ticket.Criticidad}}</div> 
+                <div class="mat-cell">{{ticket.Estatus}}</div> 
+                <div class="mat-cell">{{ticket.Detalle}}</div> 
+                <div class="mat-cell">{{ticket.uResponsable}}</div>     
+                <div class="mat-cell">{{ticket.Respuesta}}</div>
+                <div class="mat-cell">
+                    <div class="p-1 actions">          
+                        <button mat-mini-fab color="primary" matTooltip="Reply" (click)="openTicketDialog(null)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <!-- <button mat-mini-fab color="warn" matTooltip="Delete" class="mx-1" (click)="remove(ticket)">
+                            <mat-icon>delete</mat-icon>
+                        </button> -->
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </mat-card>
+
+    <div *ngIf="tickets.length > 0" fxLayout="row wrap">
+        <div fxFlex="100"> 
+            <mat-card class="p-0 text-center">           
+                <pagination-controls class="product-pagination" autoHide="true" maxSize="5" (pageChange)="onPageChanged($event)"></pagination-controls>
+            </mat-card>
+        </div>
+    </div>
+</div>
+</div>
+<div mat-dialog-actions>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100"> 
+        <button mat-raised-button color="warn" type="button" mat-dialog-close>Cerrar</button>
+        
+    </div> 
+</div>
+</form>

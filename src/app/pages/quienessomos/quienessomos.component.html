@@ -1,0 +1,60 @@
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-md="65" fxFlex.md="75" ngClass.gt-sm="px-3 m-0" ngClass.sm="mt-2" ngClass.xs="mt-2">
+        <h2>Nuestra historia</h2>
+                        <h4>DIKEN International</h4>
+                        <p style="text-align:justify ;">
+                            Empresa de clase mundial, fundada en 1989 con la misión de brindar soluciones integrales y
+                            productivas de higiene, seguridad y mantenimiento a la industria mundial, esto mediante una
+                            amplia gama de productos químicos y equipos especializados, integrados a un soporte técnico
+                            y de asesoría profesional.
+                        </p>
+
+                        <h4>Misión</h4>
+                        <p>
+                            Consolidarnos en nuestros mercados meta mediante un análisis continuo y detallado de los mismos, 
+                            con una infraestructura operativa internacional y personal comprometido altamente capacitado, 
+                            generando soluciones integrales e innovadoras a nuestros clientes contribuyendo a maximizar la 
+                            productividad de sus procesos, ofreciendo productos especializados de calidad mundial, a precios 
+                            competitivos y con servicios integrales de alta generación de valor, garantizando siempre la 
+                            rentabilidad y transparencia de nuestra empresa.
+                        </p>
+                        <h4>Visión</h4>
+                        <p>
+                           Ser líderes en el continente americano, en nuestros diferentes mercados meta, como proveedores de químicos 
+                           y equipos especializados para la higiene, seguridad, mantenimiento, manipulación de alimentos y manejo de materiales.
+                        </p>
+                        <h4>Política de Calidad</h4>
+                        <p> 
+                            En Diken International somos una empresa comprometida en generar soluciones integrales en las áreas de Higiene, Seguridad, 
+                            Mantenimiento, Manipulación de Alimentos y Manejo de Materiales, con insumos especializados de calidad mundial, soportados 
+                            por elementos que generan valor y maximizan la inversión.<br>
+                            La colaboración de nuestros proveedores; entregas oportunas son claves para la satisfacción de nuestros clientes.<br>
+                            Con las habilidades, conocimiento y compromiso de nuestro personal trabajamos en desarrollo de la mejora continua y cumplimientos
+                            de los requisitos aplicables en nuestro Sistema de Gestión de Calidad.
+                        </p>
+    </div>
+    <div fxFlex="100" fxFlex.gt-md="35" fxFlex.md="25">
+        <mat-card class="product-image">
+            
+            <button mat-icon-button (click)="openZoomViewer()" fxHide="false" fxHide.gt-md><mat-icon>fullscreen</mat-icon></button>
+            <img *ngIf="image" [src]="image" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave($event)"/>
+        </mat-card>       
+
+        <div class="small-carousel"> 
+            <div class="swiper-container" [swiper]="config">
+                <div class="swiper-wrapper"> 
+                    <div *ngFor="let image of product?.images" class="swiper-slide">
+                        <mat-card (click)="selectImage(image)" class="p-1">
+                            <img [attr.data-src]="image.small" class="swiper-lazy"/>
+                            <div class="swiper-lazy-preloader"></div>
+                        </mat-card>
+                    </div>                    
+                </div>
+                <button mat-icon-button class="swiper-button-prev swipe-arrow"><mat-icon>keyboard_arrow_left</mat-icon></button>
+                <button mat-icon-button class="swiper-button-next swipe-arrow"><mat-icon>keyboard_arrow_right</mat-icon></button> 
+            </div>
+        </div>
+
+    </div>
+
+</div>

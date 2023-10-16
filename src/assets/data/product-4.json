@@ -1,0 +1,24 @@
+{ 
+    "id": 4,
+    "name": "Chaleco Rescatista",
+    "images": [
+        {
+            "small": "assets/images/products/204013-small.jpg",
+            "medium": "assets/images/products/204013-medium.jpg",
+            "big": "assets/images/products/204013-big.jpg"
+        }
+    ],
+    "oldPrice": 1655,
+    "newPrice": 1379.99,
+    "discount": 20,
+    "ratingsCount": 6,
+    "ratingsValue": 500,
+    "description": "Reflejante térmico plástico 100% PVC color plata de 2” de ancho, con micro esferas encapsuladas resistente a los cambios de temperatura.",
+    "availibilityCount": 2,
+    "cartCount": 0,
+    "color": ["#4C4C4C","#B6B7B9"],
+    "size": ["13.3''","15.4''","17''"],
+    "weight": 2150,
+    "categoryId": 100
+}
+

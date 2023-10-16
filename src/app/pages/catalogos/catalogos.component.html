@@ -1,0 +1,195 @@
+<table class="table borderless" style="width: 100%;">
+    <tr>
+        <td colspan="5">
+            <div style="background-color:#007bb9;" class="text-center div-catalogo-titulo">
+                <h2 style=" color:#FFFFFF; padding:5px;">Divisi&oacute;n Procesadores de Alimentos,
+                    Bebidas, Agrícola y Pecuaria</h2>
+            </div>
+        </td>
+    </tr>
+</table>
+<div *ngIf="viewType == 'grid'" fxLayout="row wrap" class="products-wrapper">
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/alimentos-quimicos.jpg?nocache=1669386904" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+            Catálogo de Químicos
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga externa','PDF Catalogo Alimentos Quimicos',this.href]);" target="_blank" href="https://catalogos.dikeninternational.com/view/950186618/">Ver catálogo</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/cat-alimentos-equipos.jpg?nocache=1669386904" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+            Catálogo de Equipos
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a  mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga interna','PDF Catalogo Alimentos Equipos',this.href]);" target="_blank" class="btn btn-success btn-xs" href="https://catalogos.dikeninternational.com/view/76203941/">Ver catálogo</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/FOLLETO_AGRICOLA_2021.jpg?nocache=1669386904" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+           Folleto Agricola 2021
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga interna','PDF Catalogo Alimentos Agricola',this.href]);" target="_blank" class="btn btn-success btn-xs" href="https://catalogos.dikeninternational.com/view/518207612/">Ver Folleto</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/FOLLETO_BEBIDAS_2021.jpg?nocache=1669386904" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+           Folleto Bebidas 2021
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga interna','PDF Catalogo Alimentos Bebidas',this.href]);" target="_blank" class="btn btn-success btn-xs" href="https://catalogos.dikeninternational.com/view/518084836/">Ver Folleto</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/FOLLETO_PECUARIA_2021.jpg?nocache=1669386904" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+           Folleto Pecuaria 2021
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga interna','PDF Catalogo Alimentos Pecuario',this.href]);" target="_blank" class="btn btn-success btn-xs" href="https://catalogos.dikeninternational.com/view/518962973/">Ver Folleto</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+<br>
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/FOLLETO_AGUACATE_2021.jpg?nocache=1669398196" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+           Folleto Aguacate 2021
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga interna','PDF Catalogo Alimentos Agucate',this.href]);" target="_blank" class="btn btn-success btn-xs" href="https://catalogos.dikeninternational.com/view/518133812/">Ver Folleto</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/FOLLETO_C%C3%8DTRICOS_2021.jpg?nocache=1669398196" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+           Folleto Citricos 2021
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga interna','PDF Catalogo Alimentos Citricos',this.href]);" target="_blank" class="btn btn-success btn-xs" href="https://catalogos.dikeninternational.com/view/518007993/">Ver Folleto</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/FOLLETO_PESCADO_Y_MARISCOS_2021.jpg?nocache=1669398196" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+           Folleto Pescado Y Mariscos 2021
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga interna','PDF Catalogo Alimentos Pescado Y Mariscos',this.href]);" target="_blank" class="btn btn-success btn-xs" href="https://catalogos.dikeninternational.com/view/518945580/">Ver Folleto</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+<div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+    <mat-card class="product-item text-center">
+        
+        <a  class="image-link">
+            <img src="https://dikeninternational.com/mex/catalogos/img/FOLLETO_PESCADO_Y_MARISCOS_2021.jpg?nocache=1669398196" alt="">
+        </a>
+        <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+        <a  class="title text-truncate">
+            Catálogo Industria Farmacéutica y Hospitalaria
+        </a>
+                             
+        <div class="divider mt-2"></div>
+        <div class="icons">
+            <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga interna','PDF  Catálogo Industria Farmacéutica y Hospitalaria',this.href]);" target="_blank" class="btn btn-success btn-xs" href="https://catalogos.dikeninternational.com/view/518691348/">Ver Catálogo</a>
+            <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+        </div>
+    </mat-card>
+   
+   
+</div>
+
+</div>

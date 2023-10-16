@@ -1,0 +1,83 @@
+<div class="p-1">
+    <mat-form-field  *ngIf="visiblecombodivision" appearance="outline" class="w-100">
+        <mat-label>Oficina</mat-label>
+        <mat-select  (valueChange)="changeOficina($event)">
+           
+            <mat-option *ngFor="let element of oficinas" [value]="element.oficina">
+                <span>{{element.oficina}}</span>
+            </mat-option>
+        </mat-select> 
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <div class="mat-table admin-table">
+        <div class="mat-header-row"> 
+            <div class="mat-header-cell mat-column-8 ">Portafolio</div>
+            <div class="mat-header-cell" style="text-align: right;">{{year-1}}</div>
+            <div class="mat-header-cell mat-column-8" style="text-align: right;">{{year}}</div>
+            <div class="mat-header-cell mat-column-8" style="text-align: right;">PPTO {{year}}</div>
+            <div class="mat-header-cell mat-column-8">Avance vs {{year-1}}</div>
+            <div class="mat-header-cell mat-column-10 " >Avance vs venta esperada </div>
+            <div class="mat-header-cell" style="text-align: right;">Promedio diario PPTO</div>
+            <div class="mat-header-cell mat-column-8">Días Vta</div>
+            <div class="mat-header-cell" style="text-align: right;">VentaEsperada</div>
+        </div>
+        <div *ngFor="let element of ventaporoficina " class="mat-row"> 
+            <div class="mat-cell mat-column-8"><small>{{element.Portafolio}}</small></div> 
+            <div class="mat-cell " style="text-align: right;"><small>{{element.TotalAnioAnt | currency: '$' :true:'1.0'}}</small></div> 
+            <div class="mat-cell mat-column-8" style="text-align: right;"><small>{{element.TotalAnioActual | currency: '$' :true:'1.0'}}</small></div>
+            <div class="mat-cell mat-column-8" style="text-align: right;"><small>{{element.PPTO | currency: '$' :true:'1.0'}}</small></div>
+            <div class="  mat-column-8  {{getColor(element.AvanceVsPPTO)}}"
+            
+            ><strong>{{element.AvanceVsPPTO}}%</strong></div>
+            <div class=" mat-column-10
+            {{getColor(element.avancecsventaesperada)}}"
+             ><strong>{{element.avancecsventaesperada}}%</strong></div>
+            <div class="mat-cell" style="text-align: right;"><small>{{element.PromedioDiarioPpto | currency: '$' :true:'1.0'}}</small></div>
+            <div class="mat-cell mat-column-8"><small>{{element.DiasVta}}</small></div>
+            <div class="mat-cell" style="text-align: right;"><small>{{element.VentaEsperada | currency: '$' :true:'1.0'}}</small></div>
+            
+               
+        </div>
+    </div>
+   <mat-divider></mat-divider>
+   
+   <div  *ngFor="let elemento of ventaAsesoresOficina">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="w-100 p-2">
+        <h2>Asesor: {{elemento.vendedorOK}}</h2>  
+    </div>
+    
+
+    <mat-divider></mat-divider>
+    <div class="mat-table admin-table">
+        <div class="mat-header-row"> 
+            <div class="mat-header-cell mat-column-8 ">Portafolio</div>
+            <div class="mat-header-cell"style="text-align: right;">{{year-1}}</div>
+            <div class="mat-header-cell mat-column-8" style="text-align: right;">{{year}}</div>
+            <div class="mat-header-cell mat-column-8"style="text-align: right;">PPTO {{year}}</div>
+            <div class="mat-header-cell mat-column-8">Avance vs 2022</div>
+            <div class="mat-header-cell mat-column-10 " >Avance vs venta esperada </div>
+            <div class="mat-header-cell" style="text-align: right;">Promedio diario PPTO</div>
+            <div class="mat-header-cell mat-column-8">Días Vta</div>
+            <div class="mat-header-cell" style="text-align: right;">VentaEsperada</div>
+        </div>
+        <div *ngFor="let element of elemento.datos " class="mat-row"> 
+            <div class="mat-cell mat-column-8"><small>{{element.Portafolio}}</small></div> 
+            <div class="mat-cell " style="text-align: right;"><small>{{element.TotalAnioAnt | currency: '$' :true:'1.0'}}</small></div> 
+            <div class="mat-cell mat-column-8" style="text-align: right;"><small>{{element.TotalAnioActual | currency: '$' :true:'1.0'}}</small></div>
+            <div class="mat-cell mat-column-8" style="text-align: right;"><small>{{element.PPTO | currency: '$' :true:'1.0'}}</small></div>
+            <div class="  mat-column-8  {{getColor(element.AvanceVsAnioAnt)}}"
+            
+            ><strong>{{element.AvanceVsAnioAnt}}%</strong></div>
+            <div class=" mat-column-10
+            {{getColor(element.avancecsventaesperada)}}"
+             ><strong>{{element.avancecsventaesperada}}%</strong></div>
+            <div class="mat-cell" style="text-align: right;"><small>{{element.PromedioDiarioPpto | currency: '$' :true:'1.0'}}</small></div>
+            <div class="mat-cell mat-column-8"><small>{{element.DiasVta}}</small></div>
+            <div class="mat-cell" style="text-align: right;"><small>{{element.VentaEsperada | currency: '$' :true:'1.0'}}</small></div>
+            
+               
+        </div>
+    </div>
+   </div>
+   
+</div>

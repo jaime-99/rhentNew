@@ -1,0 +1,23 @@
+{ 
+    "id": 2,
+    "name": "Despachador de toalla",
+    "images": [
+        {
+            "small": "assets/images/products/100286-small.jpg",
+            "medium": "assets/images/products/100286-medium.jpg",
+            "big": "assets/images/products/100286-big.jpg"
+        }
+    ],
+    "oldPrice": 0,
+    "newPrice": 1551.00,
+    "discount": 0,
+    "ratingsCount": 8,
+    "ratingsValue": 800,
+    "description": "Despachador en Toalla Automatico Mod. 20024",
+    "availibilityCount": 3,
+    "cartCount": 0,
+    "color": ["#1D1D1D","#DADADA","#597087"],
+    "size": ["24''","28''","32''"],
+    "weight": 9550,
+    "categoryId": 51
+}

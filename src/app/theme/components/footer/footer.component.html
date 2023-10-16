@@ -1,0 +1,59 @@
+<footer class="bg-primary footer">
+    <!-- <div fxLayout="column" fxLayout.gt-sm="row wrap" fxLayoutAlign="center center" class="border-bottom-mute subscribe-block theme-container">
+        <div fxFlex="100" fxFlex.gt-sm="40" fxLayout="column" fxLayoutAlign="center center">
+            <h1 class="fw-500">Subscribe our Newsletter</h1>
+            <h3 class="fw-300 secondary-color">Stay up to date with our latest new and products</h3>
+        </div>
+        <form method="get" class="subscribe-search-form" fxLayout="row" fxFlex="100" fxFlex.gt-sm="42.4" ngClass.sm="mt-2" ngClass.xs="mt-2">
+            <input type="text" placeholder="Your email address..." fxFlex>
+            <button mat-raised-button color="accent" (click)="subscribe()" type="button" class="mat-elevation-z0 text-muted">Subscribe</button>
+        </form>
+    </div> -->
+    <div fxLayout="row wrap" fxLayoutAlign="space-between" class="py-3 border-bottom-mute theme-container">
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="40">
+            <h3 class="col-title"> LINKS</h3>
+            <p class="mt-2"><a href="javascript:void(0);" class="link secondary-color">Mi Cuenta</a></p>
+            <p class="mt-1"><a routerLink="/contact" class="link secondary-color">Contacto</a></p>
+            <p class="mt-1"><a routerLink="/compare" class="link secondary-color">Lista de comparaciones</a></p>
+            <p class="mt-1"><a routerLink="/wishlist" class="link secondary-color">Lista de deseos </a></p>
+            <p class="mt-1"><a routerLink="/checkout" class="link secondary-color">Verificar</a></p>
+            <p class="mt-1"><a href="javascript:void(0);" class="link secondary-color">FAQ</a></p>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="30" fxFlex.sm="60" ngClass.xs="mt-2" class="contact-information">
+            <h3 class="col-title">Información de contacto</h3>
+            <p fxLayout="row" fxLayoutAlign="start center" class="mt-2 secondary-color">
+                <mat-icon style="width: 32px;">location_on </mat-icon>
+                <span style="margin-left:5px ;"> Av. Industrial Aeroespacial # 2900, Parque Industrial Saltillo-Ramos Tercera Etapa, Ramos Arizpe, Coah.</span>
+            </p>
+            <p fxLayout="row" fxLayoutAlign="start center" class="mt-1 secondary-color">
+                <mat-icon>call</mat-icon>
+                <span>(844) 866-95-20 al 25</span>
+            </p>
+            <p fxLayout="row" fxLayoutAlign="start center" class="mt-1 secondary-color">
+                <mat-icon>mail_outline</mat-icon>
+                <span>comentarios@dikeninternational.com</span>
+            </p>
+            <p fxLayout="row" fxLayoutAlign="start center" class="mt-1 secondary-color">
+                <mat-icon>Horarios</mat-icon>
+                <span>Lunes - Viernes / 8:00AM - 6:30PM</span>
+            </p>
+            <p fxLayout="row" fxLayoutAlign="start center" class="mt-1 secondary-color">
+                <mat-icon>directions</mat-icon>
+                <a href="javascript:void(0);" class="link secondary-color">Obtener direcciones</a>
+            </p>
+            <!-- <p fxLayout="row" fxLayoutAlign="start center" class="mt-1 secondary-color">
+                <mat-icon>directions_bus</mat-icon>
+                <span>Rutas</span>
+            </p> -->
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="50" ngClass.sm="mt-2" ngClass.xs="mt-2">
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [mapTypeControl]="true">
+                <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true"></agm-marker>
+            </agm-map>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" class="copyright secondary-color theme-container">
+        <p ngClass.xs="mt-1">Copyright © 2022 Todos los derechso reservados</p>
+        <p>Diseñado y desarrollado por <a mat-button href="http://themeseason.com/" target="_blank">Ti Diken</a></p>
+    </div>
+</footer>

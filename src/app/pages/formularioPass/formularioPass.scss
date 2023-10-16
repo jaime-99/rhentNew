@@ -1,0 +1,22 @@
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.centered-form div {
+  margin-bottom: 10px;
+}
+
+.centered-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.centered-form input[type="text"],
+.centered-form input[type="email"],
+.centered-form input[type="password"] {
+  width: 200px;
+}

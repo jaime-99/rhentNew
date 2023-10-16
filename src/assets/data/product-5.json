@@ -1,0 +1,23 @@
+{ 
+    "id": 5,
+    "name": "Derma soap",
+    "images": [
+        {
+            "small": "assets/images/products/404-small.jpg",
+            "medium": "assets/images/products/404-medium.jpg",
+            "big": "assets/images/products/204013-big.jpg"
+        }
+    ],
+    "oldPrice": null,
+    "newPrice": 105,
+    "discount": null,
+    "ratingsCount": 2,
+    "ratingsValue": 200,
+    "description": "Dermasoap aroma almendra",
+    "availibilityCount": 0,
+    "cartCount": 0,
+    "color": ["#1E1B00","#898E8B"],
+    "size": null,
+    "weight": 3250,
+    "categoryId": 100
+}

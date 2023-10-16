@@ -1,0 +1,74 @@
+<div class="p-1">
+
+    <mat-card class="p-0">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="w-100 p-2">
+            <h2>Listado de Reportes de Actividades</h2>   
+        </div>
+        <mat-divider></mat-divider>
+        <div class="example-button-row">
+        <button (click)="AddCapacitacion()" mat-flat-button color="primary" style="margin-left: 5px;">
+            <mat-icon>add</mat-icon>
+            Capacitación
+          </button>
+          <button  (click)="AddPrueba()" mat-flat-button color="primary">
+            <mat-icon>add</mat-icon>
+            Pruebas
+          </button>
+          <button (click)="AddTrabajoPlanta()" mat-flat-button color="primary">
+            <mat-icon>add</mat-icon>
+            Trabajo en Planta
+          </button>
+          <button  mat-flat-button color="primary">
+            <mat-icon>add</mat-icon>
+            Clientes Nuevos
+          </button>
+          <button  mat-flat-button color="primary">
+            <mat-icon>add</mat-icon>
+            Cotizaciones
+          </button>
+
+        </div>
+        <mat-divider></mat-divider>
+        <div class="mat-table admin-table">
+            <div class="mat-header-row"> 
+                <div class="mat-header-cell mat-column-id">Fecha</div>
+                <div class="mat-header-cell">Usuario</div>
+                <div class="mat-header-cell mat-column-15">Clave</div>
+                <div class="mat-header-cell mat-column-8">Cliente </div>
+                <div class="mat-header-cell">Actividad</div>
+                <div class="mat-header-cell mat-column-8">Adjunto</div>
+                
+                <div class="mat-header-cell">Acciones</div>
+            </div>
+            <div *ngFor="let element of actividadesfiltradas | paginate: { itemsPerPage: count, currentPage: page }" class="mat-row"> 
+                <div class="mat-cell mat-column-id"><small>{{element.fecha}}</small></div> 
+                <div class="mat-cell "><small>{{element.usuario}}</small></div> 
+                <div class="mat-cell mat-column-15"><small>{{element.Clave}}</small></div>
+                <div class="mat-cell mat-column-8"><small>{{element.Cliente}}</small></div>
+                <div class="mat-cell"><small>{{element.tipo}}</small></div>
+      
+                <div class="mat-cell mat-column-8"><small>
+                    <a href="https://www.dikeninternational.com/bigdata/{{element.ruta}}/{{element.archivo}}" target="_blank" mat-mini-fab color="primary" aria-label="Example icon button with a delete icon">
+                        <mat-icon>attach_file</mat-icon>
+                    </a>
+                </small></div>
+                <div class="mat-cell">
+                    <div class="p-1 actions">          
+                        <button mat-mini-fab color="primary" matTooltip="Editar" (click)="openCarteraClientedialog(element)" >
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                       
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </mat-card>
+
+    <div *ngIf="actividadesfiltradas.length > 0" fxLayout="row wrap">
+        <div fxFlex="100"> 
+            <mat-card class="p-0 text-center">           
+                <pagination-controls class="product-pagination" autoHide="true" maxSize="50" (pageChange)="onPageChanged($event)"></pagination-controls>
+            </mat-card>
+        </div>
+    </div>
+</div>

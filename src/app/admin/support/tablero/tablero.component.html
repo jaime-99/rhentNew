@@ -1,0 +1,65 @@
+<div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start"  style="height: 95%;width:100%  ;">
+ 
+    <!-- <div class="content mat-app-background" fxLayout="row" fxLayout.xs="column" fxLayoutGap="32px"> -->
+      <div fxLayout fxLayout.xs="column"    fxFlex="25%">
+          
+    
+          <mat-card class="p-0 gradient-purple">
+            <mat-card-title>Mis tikets abiertos</mat-card-title>
+                     
+            <mat-card-content>
+                 <p >5</p>
+            </mat-card-content>
+            <mat-card-actions >
+                <button  mat-mini-fab color="primary" (click)="openTicketDialog(null)"><mat-icon>plus_one</mat-icon></button>
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openListTicketDialog('A')"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+          </mat-card>
+      
+      </div>
+      <div fxLayout fxLayout.xs="column"    fxFlex="25%">
+        <mat-card class="p-0 gradient-teal">
+            <mat-card-title>Mis tikets cerrados</mat-card-title>
+
+         
+            <mat-card-content>
+                 <p >3</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openListTicketDialog('C')"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+        </mat-card>
+      </div>
+    <div  fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="25%">
+        <mat-card class="p-0 gradient-amber" >
+            <mat-card-title>Tikets asignados abiertos</mat-card-title>
+            
+            <mat-card-content>
+                 <p >6</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+
+        </mat-card>
+    </div>
+    <div  fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="25s%">
+        <mat-card  class="gradient-green tile p-0">
+            <mat-card-title>   Tikets asignados cerrados</mat-card-title>
+          
+            <mat-card-content>
+                 <p >15</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

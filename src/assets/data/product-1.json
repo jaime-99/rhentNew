@@ -1,0 +1,24 @@
+{ 
+    "id": 1,
+    "name": "Guantes desechables de nitrilo",
+    "images": [
+        {
+            "small": "assets/images/products/102527-small.jpg",
+            "medium": "assets/images/products/102527-medium.jpg",
+            "big": "assets/images/products/102527-big.jpg"
+        }
+      
+    ],
+    "oldPrice": null,
+    "newPrice": 1515,
+    "discount": null,
+    "ratingsCount": 4,
+    "ratingsValue": 350,
+    "description": "GUANTE DE NITRILO SIN POLVO C/500 8 MIL ",
+    "availibilityCount": 150,
+    "cartCount": 0,
+    "color": ["#5C6BC0","#66BB6A","#90A4AE"],
+    "size": ["L"],
+    "weight": 150,
+    "categoryId": 100
+}

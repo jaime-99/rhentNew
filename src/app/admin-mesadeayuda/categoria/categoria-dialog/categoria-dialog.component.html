@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Categoría</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+    <!-- <form autocomplete="off"> -->
+    <div mat-dialog-content> 
+        
+                <div fxLayout="row wrap" class="mt-2">
+                    <div fxFlex="100" >
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Departamento</mat-label>
+                            <mat-select formControlName="DepartamentoId" >
+                               
+                                <mat-option *ngFor="let departamento of dptos" [value]="departamento.DepartamentoId">
+                                    <span>{{departamento.Departamento}}</span>
+                                </mat-option>
+                            </mat-select> 
+                        </mat-form-field>
+                    </div>
+                
+                    <div fxFlex="100" >
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Categoria</mat-label>
+                            <input matInput placeholder="" formControlName="Categoria" required> 
+                            
+                        </mat-form-field>
+                    </div>
+                 
+                </div>  
+       
+    </div>
+    <div mat-dialog-actions>
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100"> 
+            <button mat-raised-button color="warn" type="button" mat-dialog-close>Cerrar</button>
+            <button mat-raised-button color="primary" type="submit">Guardar</button>
+        </div> 
+    </div>
+</form>

@@ -1,0 +1,89 @@
+<!-- todo esto lo habia eliminado , no se debio eliminar, siempre guardar una copia -->
+
+<mat-toolbar id="menu-toolbar" class="top-navbar mat-elevation-z2" fxLayoutAlign="start center">
+  <!-- <img [src]="'assets/images/flags/LOGO_DIKEN_2022.jpg'" width="80" style="float:left ;margin-left: 10px;margin-right: 10px;">
+  <a mat-button routerLink="/" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">INICIO</a>
+  <a mat-button [matMenuTriggerFor]="negocios">Divisiones de negocio<mat-icon class="caret">arrow_drop_down</mat-icon></a>
+  <mat-menu #negocios="matMenu" [overlapTrigger]="false" class="app-dropdown">
+
+      <a mat-menu-item >ALIMENTOS</a>
+      <a mat-menu-item >CADENAS</a>
+      <a mat-menu-item (click)="GotoRHNET()">RHNET</a>
+      <a mat-menu-item routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">INDUSTRIAL</a>
+       <a mat-menu-item (click)="GotoPicsa">Picsa</a>
+      <a mat-menu-item (click)="GotoProsan">Prosan</a>
+     <a mat-menu-item (click)="GotoUniversidadDiken()">Universidad Diken</a>  -->
+
+
+
+  <!-- </mat-menu> -->
+
+   <!-- <a mat-button [matMenuTriggerFor]="catalogos">Catalogos<mat-icon class="caret">arrow_drop_down</mat-icon></a>
+  <mat-menu #catalogos="matMenu" [overlapTrigger]="false" class="app-dropdown">
+      <a mat-menu-item >D-TREND</a>
+      <a mat-menu-item (click)="GotoBigData()">D-TREND</a>
+      <a mat-menu-item routerLink="/catalogo">ALIMENTOS</a>
+      <a mat-menu-item routerLink="/catalogoscadenas">CADENAS</a>
+      <a mat-menu-item (click)="GotoRHNET()">RHNET</a>
+      <a mat-menu-item routerLink="/catalogosindustrial" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">INDUSTRIAL</a>
+       <a mat-menu-item (click)="GotoPicsa">Picsa</a>
+      <a mat-menu-item (click)="GotoProsan">Prosan</a>
+      <a mat-menu-item (click)="GotoUniversidadDiken()">Universidad Diken</a>
+
+
+
+  </mat-menu> -->
+<!--
+  <a mat-button [matMenuTriggerFor]="categorias">Categorías<mat-icon class="caret">arrow_drop_down</mat-icon></a>
+  <mat-menu #categorias="matMenu" [overlapTrigger]="false" class="app-dropdown">
+
+      <button (click)="search( 'QUIMICO')" mat-menu-item>QUÍMICOS</button>
+      <button (click)="search( 'EQUIPO')" mat-menu-item>EQUIPOS</button>
+
+
+  </mat-menu> -->
+
+<!--
+  <a mat-button [routerLink]="['/quienessomos']" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">¿Quienes somos?</a>
+
+  <a mat-button [routerLink]="['/sucursales']" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">Sucursales</a>
+  <a mat-button  (click)="GotoUniversidadDiken()" >universidad diken</a>
+
+   <a mat-button [matMenuTriggerFor]="pages">Plataformas<mat-icon class="caret">arrow_drop_down</mat-icon></a>
+  <mat-menu #pages="matMenu" [overlapTrigger]="false" class="app-dropdown">
+
+      <a mat-menu-item (click)="GotoBigData()">Big Data</a>
+      <a mat-menu-item routerLink="/mesadeayuda/tablero">Mesa de Ayuda</a>
+       <a mat-menu-item (click)="GotoRHNET()">RHNET</a>
+      <a mat-button routerLink="/rhnet" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">RHNET</a>
+       <a mat-menu-item (click)="GotoPicsa">Picsa</a>
+      <a mat-menu-item (click)="GotoProsan">Prosan</a>
+      <a mat-menu-item (click)="GotoUniversidadDiken()">Universidad Diken</a>
+
+
+
+  </mat-menu> -->
+
+  <mat-menu #shop="matMenu" class="app-dropdown">
+      <a mat-menu-item routerLink="/productos" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">{{ 'NAV.ALL_PRODUCTS' | translate }}</a>
+      <a mat-menu-item [routerLink]="['/productos', '2', 'PC All-in-One']" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">{{ 'NAV.PRODUCT_DETAIL' | translate }}</a>
+      <a mat-menu-item routerLink="/cart" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">{{ 'NAV.CART' | translate }}</a>
+      <a mat-menu-item routerLink="/cotizacion" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">{{ 'NAV.CHECKOUT' | translate }}</a>
+      <a mat-menu-item routerLink="/checkout" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">{{ 'NAV.CHECKOUT' | translate }}</a>
+  </mat-menu>
+
+  <!-- <mat-menu #others="matMenu" class="app-dropdown">
+      <a mat-menu-item href="http://themeseason.com" target="_blank">{{ 'NAV.EXTERNAL_LINK' | translate}}</a>
+      <a mat-menu-item>Menu item</a>
+      <a mat-menu-item>Menu item</a>
+      <a mat-menu-item>Menu item</a>
+  </mat-menu> -->
+
+  <!-- <a mat-button routerLink="/contact" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">Contacto</a> -->
+  <!-- <a mat-button routerLink="/plataformas" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">Plataformas</a> -->
+  <a mat-button routerLink="/misPedidos" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">Ver mis pedidos</a>
+  <a mat-button routerLink="/productos" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">Productos</a>
+
+
+</mat-toolbar>
+

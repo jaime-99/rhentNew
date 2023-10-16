@@ -1,0 +1,78 @@
+<div class="p-1">
+    <mat-card class="p-0"> 
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="w-100 p-2">
+            <h2>Tickets Registrados</h2>   
+        </div>
+          <mat-divider></mat-divider>
+          <div fxLayout="row" fxLayoutAlign="space-between center" class="p-1">
+            <div fxLayout="row">
+                <mat-button-toggle-group #controls="matButtonToggleGroup" appearance="legacy" >            
+                    <mat-button-toggle value="add" (click)="openTicketDialog(null)">
+                        <mat-icon>person_add</mat-icon>
+                    </mat-button-toggle>
+                    <mat-button-toggle value="search">
+                        <mat-icon>search</mat-icon>
+                    </mat-button-toggle>           
+                </mat-button-toggle-group>            
+            </div>
+            <form class="user-search" [class.show]="controls.value == 'search'">
+                <mat-form-field class="user-search-input">
+                    <input matInput placeholder="Buscar tiket..." [(ngModel)]="searchText" name="search">
+                </mat-form-field>
+            </form>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-button-toggle-group #viewType="matButtonToggleGroup" appearance="legacy" value="grid">            
+                    <mat-button-toggle value="grid">
+                        <mat-icon>view_module</mat-icon>
+                    </mat-button-toggle>
+                    <mat-button-toggle value="list">
+                        <mat-icon>view_list</mat-icon>
+                    </mat-button-toggle>           
+                </mat-button-toggle-group>
+            </div>
+        </div>
+         
+        <mat-divider></mat-divider>
+        <div class="mat-table admin-table">
+            <div class="mat-header-row"> 
+                <div class="mat-header-cell mat-column-id">Id</div>
+                <div class="mat-header-cell mat-column-8">Usuario</div>
+                <div class="mat-header-cell mat-column-8">Categoría</div>
+                <div class="mat-header-cell mat-column-10">Sub Categoría</div>
+                <div class="mat-header-cell mat-column-8">Criticidad</div> 
+                <div class="mat-header-cell mat-column-8">Estatus</div>
+                <div class="mat-header-cell">Detalle</div>  
+                <div class="mat-header-cell mat-column-10">Responsable</div>
+                <div class="mat-header-cell  mat-column-id"></div>
+            </div>
+            <div *ngFor="let ticket of dataTiket | TiketSearchPipe : searchText | paginate: { itemsPerPage: count, currentPage: page }" class="mat-row"> 
+                <div class="mat-cell mat-column-id"><small>{{ticket.TiketId}}</small></div> 
+                <div class="mat-cell mat-column-8"><small>{{ticket.Solicitante}}</small></div> 
+                <div class="mat-cell mat-column-8"><small>{{ticket.Categoria}}</small></div>
+                <div class="mat-cell mat-column-10"><small>{{ticket.SubCategoria}}</small></div>
+                <div class="mat-cell mat-column-8"><small>{{ticket.Criticidad}}</small></div> 
+                <div class="mat-cell mat-column-8"><small>{{ticket.Estatus}}</small></div> 
+                <div class="mat-cell"><small>{{ticket.Detalle}}</small></div> 
+                <div class="mat-cell mat-column-10"><small>{{ticket.uResponsable}}</small></div>     
+                <div class="mat-cell mat-column-id">
+                    <div class="p-1 actions">          
+                        <button mat-mini-fab color="primary" matTooltip="Reply" (click)="openTicketDialog(ticket)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <!-- <button mat-mini-fab color="warn" matTooltip="Delete" class="mx-1" (click)="remove(ticket)">
+                            <mat-icon>delete</mat-icon>
+                        </button> -->
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </mat-card>
+
+    <div *ngIf="dataTiket.length > 0" fxLayout="row wrap">
+        <div fxFlex="100"> 
+            <mat-card class="p-0 text-center">           
+                <pagination-controls class="product-pagination" autoHide="true" maxSize="5" (pageChange)="onPageChanged($event)"></pagination-controls>
+            </mat-card>
+        </div>
+    </div>
+</div>

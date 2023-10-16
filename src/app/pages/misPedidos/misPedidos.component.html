@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <table>
+    <thead>
+      <tr>
+
+        <th>Numero de Pedido</th>
+        <th>Numero Empelado</th>
+        <th>Nombre</th>
+        <th>Fecha de venta</th>
+        <th>Total</th>
+        <th><Em></Em>status de la venta</th>
+        <th>Acciones</th>
+
+
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let venta of Ventas">
+        <td>{{ venta.VentaEmpleadoId }}</td>
+        <td>{{ NumeroEmpleado }}</td>
+        <td>{{ Nombre }}</td>
+        <td>{{ venta.Fecha | date }}</td>
+        <td>${{venta.Total | number : '1.2-2'}}</td>
+        <td class="estatus">
+          <ng-container *ngIf="venta.IdEstatusVentaEmpleado === 1; else cancelado">
+            <strong>Pendiente</strong>
+          </ng-container>
+          <ng-template #cancelado>
+            <strong>Cancelado</strong>
+          </ng-template>
+
+        <td>
+          <!-- Agrega el botón con estilo de Angular Material -->
+          <button *ngIf="venta.IdEstatusVentaEmpleado === 1" mat-raised-button color="primary" (click)="BtnCancelar(venta.VentaEmpleadoId)">Cancelar</button>
+
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+
+  <!-- <button (click)="BtnCancelar()">Cancelar</button> -->
+
+
+</body>
+</html>

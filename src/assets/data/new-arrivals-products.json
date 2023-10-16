@@ -1,0 +1,169 @@
+[    
+    { 
+        "id": 1,
+        "name": "Guantes desechables de nitrilo",
+        "images": [
+            {
+                "small": "assets/images/products/102527-small.jpg",
+                "medium": "assets/images/products/102527-medium.jpg",
+                "big": "assets/images/products/102527-big.jpg"
+            }
+          
+        ],
+        "oldPrice": null,
+        "newPrice": 1515,
+        "discount": null,
+        "ratingsCount": 4,
+        "ratingsValue": 350,
+        "description": "GUANTE DE NITRILO SIN POLVO C/500 8 MIL ",
+        "availibilityCount": 150,
+        "cartCount": 0,
+        "color": ["#5C6BC0","#66BB6A","#90A4AE"],
+        "size": ["L"],
+        "weight": 150,
+        "categoryId": 100
+    },
+    { 
+        "id": 2,
+        "name": "Despachador de toalla",
+        "images": [
+            {
+                "small": "assets/images/products/100286-small.jpg",
+                "medium": "assets/images/products/100286-medium.jpg",
+                "big": "assets/images/products/100286-big.jpg"
+            }
+        ],
+        "oldPrice": 0,
+        "newPrice": 1551.00,
+        "discount": 0,
+        "ratingsCount": 8,
+        "ratingsValue": 800,
+        "description": "Despachador en Toalla Automatico Mod. 20024",
+        "availibilityCount": 3,
+        "cartCount": 0,
+        "color": ["#1D1D1D","#DADADA","#597087"],
+        "size": ["24''","28''","32''"],
+        "weight": 9550,
+        "categoryId": 51
+    },      
+    { 
+        "id": 3,
+        "name": "Product 3",
+        "images": [
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 3",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 3",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 3"
+            },
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 3",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 3",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 3"
+            },
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 3",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 3",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 3"
+            }
+        ],
+        "oldPrice": null,
+        "newPrice": 30,
+        "discount": null,
+        "ratingsCount": 11,
+        "ratingsValue": 1050,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue eleifend nulla vel rutrum. Donec tempus metus non erat vehicula, vel hendrerit sem interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+        "availibilityCount": 5,
+        "cartCount": 0,
+        "categoryId": 200
+    },   
+    { 
+        "id": 4,
+        "name": "Product 4",
+        "images": [
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 4",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 4",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 4"
+            },
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 4",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 4",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 4"
+            },
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 4",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 4",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 4"
+            }
+        ],
+        "oldPrice": 655,
+        "newPrice": 379.99,
+        "discount": 20,
+        "ratingsCount": 6,
+        "ratingsValue": 500,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue eleifend nulla vel rutrum. Donec tempus metus non erat vehicula, vel hendrerit sem interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+        "availibilityCount": 2,
+        "cartCount": 0,
+        "categoryId": 250
+    },
+    { 
+        "id": 5,
+        "name": "Product 5",
+        "images": [
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 5",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 5",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 5"
+            },
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 5",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 5",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 5"
+            },
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 5",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 5",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 5"
+            }
+        ],
+        "oldPrice": null,
+        "newPrice": 876,
+        "discount": null,
+        "ratingsCount": 2,
+        "ratingsValue": 200,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue eleifend nulla vel rutrum. Donec tempus metus non erat vehicula, vel hendrerit sem interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+        "availibilityCount": 0,
+        "cartCount": 0,
+        "categoryId": 200
+    },
+    { 
+        "id": 6,
+        "name": "Product 6",
+        "images": [
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 6",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 6",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 6"
+            },
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 6",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 6",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 6"
+            },
+            {
+                "small": "https://via.placeholder.com/180x135/607D8B/fff/?text=New Product 6",
+                "medium": "https://via.placeholder.com/480x365/607D8B/fff/?text=New Product 6",
+                "big": "https://via.placeholder.com/960x720/607D8B/fff/?text=New Product 6"
+            }
+        ],
+        "oldPrice": null,
+        "newPrice": 450,
+        "discount": null,
+        "ratingsCount": 4,
+        "ratingsValue": 300,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue eleifend nulla vel rutrum. Donec tempus metus non erat vehicula, vel hendrerit sem interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+        "availibilityCount": 3,
+        "cartCount": 0,
+        "categoryId": 150
+    }
+]

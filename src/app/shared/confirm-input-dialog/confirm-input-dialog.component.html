@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>{{data?.title}}</h1>
+<form [formGroup]="form" autocomplete="off">
+<div mat-dialog-content>
+    <p>{{data?.message}}</p>
+</div>
+<div fxLayout="row wrap" class="mt-2">
+<div fxFlex="100" >
+    <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Detalles</mat-label>
+        <textarea matInput formControlName="Detalle"></textarea>
+    </mat-form-field>
+</div>
+<mat-checkbox formControlName="EsPropio" *ngIf="viewcheck" class="primary" checked="true" color= 'primary'>Es de sistemas</mat-checkbox>
+</div>
+<div mat-dialog-actions>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100">
+        <button mat-raised-button color="warn" (click)="onDismiss()">No</button>
+        <button mat-raised-button color="primary" (click)="onConfirm()">Si</button>
+    </div>  
+    
+</div>
+</form>

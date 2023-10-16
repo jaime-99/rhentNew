@@ -1,0 +1,18 @@
+
+<organization-chart
+  chartClass="myChart"
+  [datasource]="ds"
+  [nodeTemplate]="myNodeTemplate"
+>
+</organization-chart>
+
+<ng-template #myNodeTemplate let-nodeData="datasource">
+  <div (click)="selectNode(nodeData)">
+		<div class="orgchart">
+      <img width="120px" height="120px" [src]="nodeData.image" alt="" />
+    </div>
+    <div class="position">{{ nodeData.title }}</div>
+    <div class="fullname">{{ nodeData.name }}<br /></div>
+   
+  </div>
+</ng-template>

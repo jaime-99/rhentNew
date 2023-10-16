@@ -1,0 +1,166 @@
+<mat-stepper #horizontalStepper [orientation]="stepperOrientation" linear="true" class="mat-elevation-z2">
+  <mat-step [stepControl]="billingForm" label="Datos del cliente">
+    <form [formGroup]="billingForm">
+      <div fxLayout="row wrap">
+
+        <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Clave Clientee</mat-label>
+              <input matInput placeholder="ClaveCliente"  formControlName="ClaveCliente" type="text" [value]="billingForm.controls.ClaveCliente.value" (keyup.enter)="onFocusOutEventCliente($event)"  required id ="claveCliente" >
+              <mat-error *ngIf="billingForm.controls.ClaveCliente.errors?.required">El nombre es requerido </mat-error>
+          </mat-form-field>
+        </div>
+
+
+
+        <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre"     [value]="billingForm.controls.Cliente.value"  formControlName= "Cliente"  type="text">
+          </mat-form-field>
+        </div>
+
+
+
+        <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Correo</mat-label>
+            <input matInput placeholder="Correo" type="text" id="myInput" [value]="billingForm.controls.correo.value" formControlName="correo">
+          </mat-form-field>
+        </div>
+
+
+
+<!--
+        <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Estado</mat-label>
+              <mat-select formControlName="EstadoClienteId"  (valueChange)="ChangeEstado($event)">
+
+                  <mat-option *ngFor="let estado of EstadoCliente" [value]="estado.EstadoClienteId">
+                      <span>{{estado.Estado}}</span>
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+      </div> -->
+
+        <!-- <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Probabilidad</mat-label>
+              <input matInput placeholder="Probabilidad" value="{{Probabilidad}}" formControlName="probabilidad">
+          </mat-form-field>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+
+            <mat-label>Cierre de Previsto</mat-label>
+           <input matInput [matDatepicker]="cierreprevisto" [value]="date" >
+           <mat-hint>DD/MM/YYYY</mat-hint>
+           <mat-datepicker-toggle matSuffix  [for]="cierreprevisto"></mat-datepicker-toggle>
+           <mat-datepicker #cierreprevisto></mat-datepicker>
+          </mat-form-field>
+        </div> -->
+        <!-- <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+
+            <mat-label>Caduca</mat-label>
+           <input matInput [matDatepicker]="picker3" [value]="datecaduca" formControlName="fechacaduca">
+           <mat-hint>DD/MM/YYYY</mat-hint>
+           <mat-datepicker-toggle matSuffix  [for]="picker3"></mat-datepicker-toggle>
+           <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+        </div> -->
+
+
+        <!-- <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Asesor</mat-label>
+              <input matInput placeholder="Asesor" formControlName="asesor" required>
+              <mat-error *ngIf="billingForm.controls.asesor.errors?.required">El correo es requiredo</mat-error>
+          </mat-form-field>
+        </div> -->
+        <!-- <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+          <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Ejecutiva</mat-label>
+              <input matInput placeholder="Ejecutiva" formControlName="ejecutiva" required>
+              <mat-error *ngIf="billingForm.controls.ejecutiva.errors?.required">La Ejecutiva es requerida</mat-error>
+          </mat-form-field>
+        </div> -->
+
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="mt-2 p-1">
+        <button mat-mini-fab matStepperNext color="primary" matTooltip="Next" matTooltipPosition="after"><mat-icon>navigate_next</mat-icon></button>
+      </div>
+    </form>
+  </mat-step>
+
+
+  <mat-step label="Revisión de Cotización">
+    <div fxLayout="row wrap">
+      <div fxFlex="100" class="p-1">
+        <h3 class="text-muted">Productos</h3>
+        <div class="divider"></div>
+        <div class="mat-table review-order-table">
+          <div class="mat-header-row">
+            <div class="mat-header-cell">Imagen</div>
+            <div class="mat-header-cell">Codigo Diken</div>
+            <div class="mat-header-cell">Producto</div>
+            <div class="mat-header-cell">Precio</div>
+            <div class="mat-header-cell">Cantidad</div>
+            <div class="mat-header-cell">Total</div>
+          </div>
+          <div *ngFor="let product of appService.Data.cartList" class="mat-row">
+            <div class="mat-cell"><img [src]="product.images[0].small"></div>
+            <div class="mat-cell">{{product.CodigoDiken}}</div>
+            <div class="mat-cell">{{product.name}}</div>
+            <div class="mat-cell">${{product.newPrice | number : '1.2-2'}}</div>
+            <div class="mat-cell text-muted"> {{product.cartCount}} </div>
+            <div class="mat-cell">${{ (product.newPrice*product.cartCount) | number : '1.2-2'}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap">
+      <div fxFlex="100" class="p-1">
+        <h3 class="text-muted mt-2">Información del cliente</h3>
+        <div class="divider"></div>
+      </div>
+      <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="25" class="p-1">
+        <p class="text-muted">Cliente:</p>
+        <p>{{billingForm.controls.ClaveCliente.value}}  {{billingForm.controls.Cliente.value}}</p>
+      </div>
+      <!-- <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="25" class="p-1">
+        <p class="text-muted">Asesor:</p>
+        <p>{{billingForm.controls.asesor.value}}</p>
+      </div>
+      <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="25" class="p-1">
+        <p class="text-muted">Ejecutiva:</p>
+        <p>{{billingForm.controls.ejecutiva.value}}</p>
+      </div> -->
+      <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="25" class="p-1">
+        <p class="text-muted">Correo:</p>
+        <p>{{billingForm.controls.correo.value}}    </p>
+      </div>
+
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center center" class="p-1">
+       <h2><span class="text-muted mr-1">Total:</span><span>${{grandTotal | number : '1.2-2'}}</span></h2>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" class="mt-2 p-1">
+      <button mat-mini-fab matStepperPrevious color="primary" matTooltip="Regresar" matTooltipPosition="before" class="mr-1"><mat-icon>navigate_before</mat-icon></button>
+      <button mat-raised-button matStepperNext color="primary" (click)="placeOrder()">Guardar</button>
+    </div>
+  </mat-step>
+  <mat-step label="Confirmación">
+    <div fxLayout="column" fxLayoutAlign="center center" class="p-2 text-center">
+      <button mat-fab color="primary"><mat-icon>check</mat-icon></button>
+      <h2 class="py-2">Felicidades! La cotización {{numcotizacion}} se ha registrado de forma correcta</h2>
+      <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus dolor ante, ut luctus mi faucibus a. Ut eu tincidunt neque. Proin porttitor id ligula id placerat. Integer nec nulla varius, dapibus libero quis, semper eros. Aliquam erat volutpat. Proin volutpat tellus vel purus interdum euismod.</p> -->
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" class="mt-2 p-1">
+      <a [routerLink]="['/']" mat-raised-button color="primary">Inicio</a>
+    </div>
+
+  </mat-step>
+</mat-stepper>

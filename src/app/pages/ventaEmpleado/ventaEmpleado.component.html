@@ -1,0 +1,136 @@
+<mat-stepper>
+  <mat-step [stepControl]="ventaForm" [editable]="false">
+    <ng-template  matStepLabel>Datos de Venta</ng-template>
+
+    <form [formGroup]="ventaForm">
+      <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+        <mat-form-field>
+          <mat-label>Usuario ID</mat-label>
+          <input matInput id="RhUsuarioId" [value]="ventaForm.get('RhUsuarioId').value" type="text"
+            formControlName="RhUsuarioId" required>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+        <mat-form-field>
+          <mat-label>Fecha</mat-label>
+          <input matInput id="Fecha" type="date" formControlName="Fecha" [value]="getCurrentDate()" required>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+        <mat-form-field>
+          <mat-label>Total</mat-label>
+          <input matInput id="Total" type="number" formControlName="Total" required [readonly]="true"
+            [value]="grandTotal">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center center" class="mt-2 p-1">
+        <button mat-mini-fab matStepperNext color="primary" matTooltip="Next"
+            matTooltipPosition="after" [disabled]="Desabilitado" ><mat-icon>navigate_next</mat-icon></button>
+      </div>
+    </form>
+  </mat-step>
+
+
+
+
+
+  <mat-step    [editable]="false"     [stepControl]="detallesForm "  >
+    <ng-template  matStepLabel>Detalles de Venta     </ng-template>
+    <div class="divider"></div>
+    <div fxLayout="row wrap">
+      <div fxFlex="100" class="p-1">
+        <h3 class="text-muted">Productos</h3>
+        <div class="divider"></div>
+        <div class="mat-table review-order-table">
+          <div class="mat-header-row">
+            <div class="mat-header-cell">Imagen</div>
+            <div class="mat-header-cell">Codigo Diken</div>
+            <div class="mat-header-cell">Producto</div>
+            <div class="mat-header-cell">Precio</div>
+            <div class="mat-header-cell">Cantidad</div>
+            <div class="mat-header-cell">Total</div>
+          </div>
+          <div *ngFor="let product of appService.Data.cartList" class="mat-row">
+            <div class="mat-cell"><img [src]="product.images[0].small"></div>
+            <div class="mat-cell">{{product.CodigoDiken}}</div>
+            <div class="mat-cell">{{product.name}}</div>
+            <div class="mat-cell">${{product.newPrice | number : '1.2-2'}}</div>
+            <div class="mat-cell text-muted">{{product.cartCount}}</div>
+            <div class="mat-cell">${{(product.newPrice * product.cartCount) | number : '1.2-2'}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap">
+      <div fxFlex="100" class="p-1">
+        <h3 class="text-muted mt-2">Información del cliente</h3>
+        <div class="divider"></div>
+
+        <div class="mat-cell"> Numero de Empleado:{{NumeroEmpleado}}</div>
+        <div class="mat-cell"> Nombre: {{Nombre}}</div>
+        <div class="mat-cell"> ID:{{UsuarioId}}</div>
+
+      </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center center" class="p-1">
+      <h2><span class="text-muted mr-1">Total:</span><span>${{grandTotal | number : '1.2-2'}}</span></h2>
+    </div>
+    <!-- Resto del contenido del paso -->
+    <div fxLayout="row" fxLayoutAlign="center center" class="mt-2 p-1">
+      <button mat-raised-button matStepperPrevious color="primary" matTooltip="Regresar" matTooltipPosition="before"
+        class="mr-1" [disabled]="Desabilitado">
+        <mat-icon>navigate_before</mat-icon>
+      </button>
+      <button mat-raised-button matStepperNext color="primary" (click)="clickDosBotones()" >Guardar detalles</button>
+    </div>
+  </mat-step>
+
+
+
+
+
+
+  <!-- <mat-step>
+    <ng-template matStepLabel>Confirmar Datos</ng-template>
+    <div>
+      <h3>Datos de Venta</h3>
+      <p>Usuario ID: {{ ventaForm.get('RhUsuarioId').value }}</p>
+      <p>Fecha: {{ ventaForm.get('Fecha1').value }}</p>
+      <p>Total: {{ ventaForm.get('Total').value }}</p>
+
+    </div> -->
+
+  <!-- <div>
+      <h3>Detalles de Venta</h3>
+      <ul>
+        <li *ngFor="let detalle of detalles.controls; let i=index">
+          <h4>Detalle {{ i + 1 }}</h4>
+          <p>Producto ID: {{ detalle.get('ProductoId').value }}</p>
+          <p>Precio: {{ detalle.get('Precio').value }}</p>
+          <p>Cantidad: {{ detalle.get('Cantidad').value }}</p>
+          <p>Importe: {{ detalle.get('Importe').value }}</p>
+        </li>
+      </ul>
+    </div> -->
+
+  <!-- <div>
+      <button mat-button color="primary" (click)="submitForm()">Guardar</button>
+      <button mat-button matStepperPrevious>Volver</button>
+    </div> -->
+  <!-- </mat-step> -->
+
+  <mat-step label="Confirmación">
+    <div fxLayout="column" fxLayoutAlign="center center" class="p-2 text-center">
+      <button mat-fab color="primary"><mat-icon>check</mat-icon></button>
+      <h2 class="py-2">Felicidades! La Venta Empleado {{numVenta}} se ha registrado de forma correcta</h2>
+      <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus dolor ante, ut luctus mi faucibus a. Ut eu tincidunt neque. Proin porttitor id ligula id placerat. Integer nec nulla varius, dapibus libero quis, semper eros. Aliquam erat volutpat. Proin volutpat tellus vel purus interdum euismod.</p> -->
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" class="mt-2 p-1">
+      <a [routerLink]="['/productos']" mat-raised-button color="primary">Inicio</a>
+    </div>
+  </mat-step>
+</mat-stepper>

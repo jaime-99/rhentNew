@@ -1,0 +1,111 @@
+<h1 mat-dialog-title>Reporte de Trabajo en Planta</h1>
+
+    <form [formGroup]="form"  autocomplete="off">
+        <div mat-dialog-content> 
+        <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+        <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+     <mat-form-field   appearance="outline" class="w-100">
+                <mat-label>Cliente</mat-label>
+                <mat-select formControlName="clave_cliente"  >
+                    
+                    <mat-option *ngFor="let element of clientes" [value]="element.clave_cliente">
+                        <span>{{element.clave_cliente+" "+ element.nombre_cliente}}</span>
+                    </mat-option>
+                </mat-select> 
+</mat-form-field>
+        </div>
+        </div>
+
+
+        
+    
+            <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Area</mat-label>
+                <input matInput formControlName="area" type="tex">
+                
+            </mat-form-field>
+        </div>
+            </div>
+            <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Productos</mat-label>
+                <textarea matInput formControlName="area" placeholder="PRODUCTOS APLCADOS UNO POR RENGLON"></textarea>
+                
+            </mat-form-field>
+        </div>
+            </div>
+
+            <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Objetivos</mat-label>
+                <textarea matInput formControlName="area"></textarea>
+                
+            </mat-form-field>
+        </div>
+            </div>
+
+            <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Resultados</mat-label>
+                <textarea matInput formControlName="area"></textarea>
+                
+            </mat-form-field>
+        </div>
+            </div>
+
+            <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Observaciones</mat-label>
+                <textarea matInput formControlName="area"></textarea>
+                
+            </mat-form-field>
+        </div>
+            </div>
+            <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="50%">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Folio del documento en papel</mat-label>
+                <input matInput formControlName="folio" type="text">
+                
+            </mat-form-field>
+         </div>
+            <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap" fxFlex="50" style="margin-left: 5px;">
+                <mat-form-field appearance="outline" class="w-100">
+                            <ngx-mat-file-input placeholder="Subir Archivo" [formControl]="fileControl" [multiple]="multiple" [accept]="accept" [color]="color">
+                              <!-- <mat-icon ngxMatFileInputIcon>folder</mat-icon> -->
+                            </ngx-mat-file-input>
+                          </mat-form-field>
+            
+        </div>
+            </div>
+            <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+                    <mat-form-field appearance="outline" class="w-100">
+     
+                        <mat-label>Fecha de las Pruebas </mat-label>
+                       <input matInput [matDatepicker]="cierreprevisto"  >
+                       <mat-hint>DD/MM/YYYY</mat-hint>
+                       <mat-datepicker-toggle matSuffix  [for]="cierreprevisto"></mat-datepicker-toggle>
+                       <mat-datepicker #cierreprevisto></mat-datepicker>
+                      </mat-form-field>
+                </div>
+            </div>
+
+        </div>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button color="primary" value="1">Presencial</mat-radio-button>
+            <mat-radio-button color="primary" style="margin-left: 5px;" value="0">Remota(videoconferencia o similar)</mat-radio-button>
+          </mat-radio-group>
+        <div mat-dialog-actions>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100"> 
+                <button mat-raised-button color="warn" type="button" mat-dialog-close>Cerrar</button>
+                <button mat-raised-button color="primary"  >Guardar</button>
+            </div> 
+        </div>
+</form>

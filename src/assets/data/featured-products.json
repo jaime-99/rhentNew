@@ -1,0 +1,124 @@
+[    
+    { 
+        "id": 1,
+        "name": "Guantes desechables de nitrilo",
+        "images": [
+            {
+                "small": "assets/images/products/102527-small.jpg",
+                "medium": "assets/images/products/102527-medium.jpg",
+                "big": "assets/images/products/102527-big.jpg"
+            }
+          
+        ],
+        "oldPrice": null,
+        "newPrice": 1515,
+        "discount": null,
+        "ratingsCount": 4,
+        "ratingsValue": 350,
+        "description": "GUANTE DE NITRILO SIN POLVO C/500 8 MIL ",
+        "availibilityCount": 150,
+        "cartCount": 0,
+        "color": ["#5C6BC0","#66BB6A","#90A4AE"],
+        "size": ["L"],
+        "weight": 150,
+        "categoryId": 100,
+        "CodigoDiken":"12345"
+    },
+    { 
+        "id": 2,
+        "name": "Despachador de toalla",
+        "images": [
+            {
+                "small": "assets/images/products/100286-small.jpg",
+                "medium": "assets/images/products/100286-medium.jpg",
+                "big": "assets/images/products/100286-big.jpg"
+            }
+        ],
+        "oldPrice": 0,
+        "newPrice": 1551.00,
+        "discount": 0,
+        "ratingsCount": 8,
+        "ratingsValue": 800,
+        "description": "Despachador en Toalla Automatico Mod. 20024",
+        "availibilityCount": 3,
+        "cartCount": 0,
+        "color": ["#1D1D1D","#DADADA","#597087"],
+        "size": ["24''","28''","32''"],
+        "weight": 9550,
+        "categoryId": 51,
+        "CodigoDiken":"12345678"
+    },    
+
+    { 
+        "id": 4,
+        "name": "Chaleco Rescatista",
+        "images": [
+            {
+                "small": "assets/images/products/204013-small.jpg",
+                "medium": "assets/images/products/204013-medium.jpg",
+                "big": "assets/images/products/204013-big.jpg"
+            }
+        ],
+        "oldPrice": 1655,
+        "newPrice": 1379.99,
+        "discount": 20,
+        "ratingsCount": 6,
+        "ratingsValue": 500,
+        "description": "Reflejante térmico plástico 100% PVC color plata de 2” de ancho, con micro esferas encapsuladas resistente a los cambios de temperatura.",
+        "availibilityCount": 2,
+        "cartCount": 0,
+        "color": ["#4C4C4C","#B6B7B9"],
+        "size": ["13.3''","15.4''","17''"],
+        "weight": 2150,
+        "categoryId": 100,
+        "CodigoDiken":"246810"
+    },
+    { 
+        "id": 5,
+        "name": "Derma soap",
+        "images": [
+            {
+                "small": "assets/images/products/404-small.jpg",
+                "medium": "assets/images/products/404-medium.jpg",
+                "big": "assets/images/products/204013-big.jpg"
+            }
+        ],
+        "oldPrice": null,
+        "newPrice": 105,
+        "discount": null,
+        "ratingsCount": 2,
+        "ratingsValue": 200,
+        "description": "Dermasoap aroma almendra",
+        "availibilityCount": 0,
+        "cartCount": 0,
+        "color": ["#1E1B00","#898E8B"],
+        "size": null,
+        "weight": 3250,
+        "categoryId": 100,
+        "CodigoDiken":"13579"
+    },
+    { 
+        "id": 6,
+        "name": "Laundry blue",
+        "images": [
+            {
+                "small": "assets/images/products/404-small.jpg",
+                "medium": "assets/images/products/404-medium.jpg",
+                "big": "assets/images/products/404-big.jpg"
+            }
+        ],
+        "oldPrice": null,
+        "newPrice": 138,
+        "discount": null,
+        "ratingsCount": 2,
+        "ratingsValue": 200,
+        "description": "Detergente Laundry blue",
+        "availibilityCount": 0,
+        "cartCount": 0,
+        "color": ["#1E1B00","#898E8B"],
+        "size": null,
+        "weight": 3250,
+        "categoryId": 100,
+        "CodigoDiken":"108642"
+    }
+]

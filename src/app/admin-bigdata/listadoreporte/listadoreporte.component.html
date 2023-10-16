@@ -1,0 +1,67 @@
+
+<div class="p-1">
+    <mat-card class="p-0">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="w-100 p-2">
+            <h2>Listado de Reportes de Actividades</h2>   
+        </div>
+        <mat-divider></mat-divider>
+        <div   style="margin-top: 10px;">
+            <form [formGroup]="form"  autocomplete="off">
+                <div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
+                <div fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="100%">
+            <mat-form-field   appearance="outline" class="w-100">
+                <mat-label>Tipo Reporte</mat-label>
+                <mat-select formControlName="idtiporeporte"  (valueChange)="changetiporeporte($event)">
+                    <mat-option value="TODO">TODO</mat-option>
+                    <mat-option *ngFor="let element of tiporeportes" [value]="element.Tipo">
+                        <span>{{element.Tipo}}</span>
+                    </mat-option>
+                </mat-select> 
+            </mat-form-field>
+        </div>
+                </div>
+        </form>
+        </div>
+
+        <mat-divider></mat-divider>
+        <div class="mat-table admin-table">
+            <div class="mat-header-row"> 
+                <div class="mat-header-cell mat-column-id">ID</div>
+                <div class="mat-header-cell">Fecha</div>
+                <div class="mat-header-cell mat-column-15">Reporte</div>
+                <div class="mat-header-cell mat-column-8">Clave </div>
+                <div class="mat-header-cell">Cliente</div>
+                <div class="mat-header-cell mat-column-8">Sucursal</div>
+                <div class="mat-header-cell">Asesor</div>
+                <div class="mat-header-cell">Acciones</div>
+            </div>
+            <div *ngFor="let element of actividadesfiltradas | paginate: { itemsPerPage: count, currentPage: page }" class="mat-row"> 
+                <div class="mat-cell mat-column-id"><small>{{element.id}}</small></div> 
+                <div class="mat-cell "><small>{{element.fecha_realizado}}</small></div> 
+                <div class="mat-cell mat-column-15"><small>{{element.tipo}}</small></div>
+                <div class="mat-cell mat-column-8"><small>{{element.clave}}</small></div>
+                <div class="mat-cell"><small>{{element.nombre_cliente}}</small></div>
+                <div class="mat-cell mat-column-8"><small>{{element.nombre_sucursal}}</small></div>
+                <div class="mat-cell mat-column-8"><small>{{element.vendedorOK}}</small></div>
+                <div class="mat-cell">
+                    <div class="p-1 actions">          
+                        <button mat-mini-fab color="primary" matTooltip="Editar" (click)="openCarteraClientedialog(element)" >
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                       
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </mat-card>
+
+    <div *ngIf="actividades.length > 0" fxLayout="row wrap">
+        <div fxFlex="100"> 
+            <mat-card class="p-0 text-center">           
+                <pagination-controls class="product-pagination" autoHide="true" maxSize="50" (pageChange)="onPageChanged($event)"></pagination-controls>
+            </mat-card>
+        </div>
+    </div>
+
+
+</div>

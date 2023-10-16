@@ -1,0 +1,173 @@
+<div *ngIf="isuserService" class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start"  style="height: 95%;width:100%  ;">
+    <h2>Tickets Asignados</h2><br>
+</div>
+<div *ngIf="isuserService" class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start"  style="height: 95%;width:100%  ;">
+  
+    <div *ngIf="isuserService"  fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="20%">
+        <mat-card class="p-0 gradient-gray" >
+            <mat-card-title>Por atender</mat-card-title>
+            
+            <mat-card-content>
+                 <p >{{tiketsasignadosabiertos}}</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openAsigListTicketDialog(1)" matTooltip="Ver Tickets"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+
+        </mat-card>
+    </div>
+    <div *ngIf="isuserService"  fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="20%">
+        <mat-card class="p-0 gradient-amber" >
+            <mat-card-title>En proceso</mat-card-title>
+            
+            <mat-card-content>
+                 <p >{{tiketsasignadosEnProceso}}</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openAsigListTicketDialog(2)" matTooltip="Ver Tickets"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+
+        </mat-card>
+    </div>
+    <div *ngIf="isuserService"  fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="20%">
+        <mat-card class="p-0 gradient-red" >
+            <mat-card-title>En espera</mat-card-title>
+            
+            <mat-card-content>
+                 <p >{{tiketsasignadosEnEspera}}</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openAsigListTicketDialog(5)"matTooltip="Ver Tickets" ><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+
+        </mat-card>
+    </div>
+    <div *ngIf="isuserService"  fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="20%">
+        <mat-card class="p-0 gradient-blue" >
+            <mat-card-title>Atendidos</mat-card-title>
+            
+            <mat-card-content>
+                 <p >{{tiketsasignadosAtendidos}}</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openAsigListTicketDialog(4)" ><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+
+        </mat-card>
+    </div>
+
+    <div *ngIf="isuserService" fxLayout fxLayout.xs="column"  fxLayoutWrap="wrap"  fxFlex="20%">
+        <mat-card  class="gradient-green tile p-0">
+            <mat-card-title>   Cerrados</mat-card-title>
+          
+            <mat-card-content>
+                 <p >{{tiketsasignadoscerrados}}</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openAsigListTicketDialog(3)" matTooltip="Ver Tickets"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+        </mat-card>
+    </div>
+<br>
+</div>
+
+<div  class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start"  style="height: 95%;width:100%  ;">
+    <h2>Tickets Registrados   </h2> <button style="margin-left:5px;" mat-mini-fab color="primary" (click)="openTicketDialog(null)" matTooltip="Nuevo Ticket"><mat-icon>plus_one</mat-icon></button><br>
+</div>
+<div class="widgets-row" fxLayout.xs="column" fxLayoutAlign="start"  style="height: 95%;width:100%  ;">
+ 
+    <!-- <div class="content mat-app-background" fxLayout="row" fxLayout.xs="column" fxLayoutGap="32px"> -->
+      <div fxLayout fxLayout.xs="column"    fxFlex="20%">
+          
+    
+          <mat-card class="p-0 gradient-pink">
+            <mat-card-title>Sin atender</mat-card-title>
+                     
+            <mat-card-content>
+                 <p >{{tiketsabiertos}}</p>
+            </mat-card-content>
+            <mat-card-actions >
+                
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openListTicketDialog(1)" matTooltip="Ver Tickets"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+          </mat-card>
+      
+      </div>
+      <div fxLayout fxLayout.xs="column"    fxFlex="20%">
+          
+    
+        <mat-card class="p-0 gradient-orange">
+          <mat-card-title>En proceso</mat-card-title>
+                   
+          <mat-card-content>
+               <p >{{tiketsEnProceso}}</p>
+          </mat-card-content>
+          <mat-card-actions >
+              <!-- <button  mat-mini-fab color="primary" (click)="openTicketDialog(null)"><mat-icon>plus_one</mat-icon></button> -->
+              <button  style="float:right ;" mat-mini-fab color="primary" (click)="openListTicketDialog(2) "matTooltip="Ver Tickets"><mat-icon>list</mat-icon></button>
+              <!-- <button mat-button>SHARE</button> -->
+          </mat-card-actions>
+        </mat-card>
+    
+    </div>
+    <div fxLayout fxLayout.xs="column"    fxFlex="20%">
+          
+    
+        <mat-card class="p-0 gradient-brown">
+          <mat-card-title>En espera</mat-card-title>
+                   
+          <mat-card-content>
+               <p >{{tiketsEnEspera}}</p>
+          </mat-card-content>
+          <mat-card-actions >
+              <!-- <button  mat-mini-fab color="primary" (click)="openTicketDialog(null)"><mat-icon>plus_one</mat-icon></button> -->
+              <button  style="float:right ;" mat-mini-fab color="primary" (click)="openListTicketDialog(5)" matTooltip="Ver Tickets"><mat-icon>list</mat-icon></button>
+              <!-- <button mat-button>SHARE</button> -->
+          </mat-card-actions>
+        </mat-card>
+    
+    </div>
+    <div fxLayout fxLayout.xs="column"    fxFlex="20%">
+          
+    
+        <mat-card class="p-0 gradient-gray">
+          <mat-card-title>Por cerrar</mat-card-title>
+                   
+          <mat-card-content>
+               <p >{{TiketsAtendidos}}</p>
+          </mat-card-content>
+          <mat-card-actions >
+              <!-- <button  mat-mini-fab color="primary" (click)="openTicketDialog(null)"><mat-icon>plus_one</mat-icon></button> -->
+              <button  style="float:right ;" mat-mini-fab color="primary" (click)="openListTicketDialog(4)" matTooltip="Ver Tickets"><mat-icon>list</mat-icon></button>
+              <!-- <button mat-button>SHARE</button> -->
+          </mat-card-actions>
+        </mat-card>
+    
+    </div>
+      <div fxLayout fxLayout.xs="column"    fxFlex="20%">
+        <mat-card class="p-0 gradient-teal">
+            <mat-card-title>Cerrados</mat-card-title>
+
+         
+            <mat-card-content>
+                 <p >{{tiketscerrados}}</p>
+            </mat-card-content>
+            <mat-card-actions style="margin-bottom: 15px;">
+                <!-- <button mat-mini-fab color="accent"><mat-icon>plus_one</mat-icon></button> -->
+                <button  style="float:right ;" mat-mini-fab color="primary" (click)="openListTicketDialog(3)" matTooltip="Ver Tickets"><mat-icon>list</mat-icon></button>
+                <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+        </mat-card>
+      </div>
+</div>

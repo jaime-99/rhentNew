@@ -1,0 +1,34 @@
+{ 
+    "id": 3,
+    "name": "Econo gel",
+    "images": [
+        {
+            "small": "assets/images/products/1-.jpg",
+            "medium": "assets/images/products/quienes-somos-2020-02-14-12.jpg",
+            "big": "assets/images/products/quienes-somos-2020-02-14-12.jpg"
+        },
+        {
+            "small": "assets/images/products/2-.jpg",
+            "medium": "assets/images/products/quienes-somos-2020-02-14-11.jpg",
+            "big": "assets/images/products/quienes-somos-2020-02-14-11.jpg"
+        },
+        {
+            "small": "assets/images/products/3-.jpg",
+	    "medium": "assets/images/products/quienes-somos-2020-02-14-09.jpg",
+            "big": "assets/images/products/quienes-somos-2020-02-14-09.jpg"
+           
+        }
+    ],
+    "oldPrice": null,
+    "newPrice": 30,
+    "discount": null,
+    "ratingsCount": 12,
+    "ratingsValue": 1150,
+    "description": "Es un sanitizante de manos para después de la etapa de lavado.",
+    "availibilityCount": 5,
+    "cartCount": 0,
+    "color": ["#474543","#8B8B8B","#FFFFFF"],
+    "size": ["14","22"],
+    "weight": 150,
+    "categoryId": 100
+}

@@ -1,0 +1,42 @@
+<h1 mat-dialog-title>Cliente</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+    <!-- <form autocomplete="off"> -->
+    <div mat-dialog-content> 
+        
+                <div fxLayout="row wrap" class="mt-2">
+                    <div fxFlex="100" >
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Clave del cliente</mat-label>
+                            <input matInput placeholder="" formControlName="clave_cliente" required> 
+                        </mat-form-field>
+                    </div>
+                
+                    <div fxFlex="100" >
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Cliente</mat-label>
+                            <input matInput placeholder="" formControlName="nombre_cliente" required> 
+                            
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="100" >
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Nivel Cliente</mat-label>
+                            <mat-select formControlName="nivel_cliente" >
+                               
+                                <mat-option *ngFor="let element of nivelcliente" [value]="element.NivelClienteId">
+                                    <span>{{element.Nivel}}</span>
+                                </mat-option>
+                            </mat-select> 
+                        </mat-form-field>
+                    </div>
+                 
+                </div>  
+       
+    </div>
+    <div mat-dialog-actions>
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100"> 
+            <button mat-raised-button color="warn" type="button" mat-dialog-close>Cerrar</button>
+            <button mat-raised-button color="primary" type="submit">Guardar</button>
+        </div> 
+    </div>
+</form>

@@ -1,0 +1,31 @@
+ <div class="form-group">
+
+                                                        <label class="col-md-2 col-sm-2 control-label"><i
+
+                                                                    class="fa fa-archive"></i> Empleados</label>
+
+                                                        <div class="col-md-4 col-sm-4">
+
+                                                            <select id="idempleado" name="idempleado" class="form-control">
+
+                                                                <?php
+
+                                                                $cn = new DBi();
+
+                                                                $cn->connect();
+
+                                                                $res = $cn->executeQuery("SELECT * FROM empleados  WHERE es_supervisor in(0,2) ORDER BY nombre");
+
+                                                                while ($row = mysqli_fetch_assoc($res)) {
+
+                                                                    echo "<option value='" . $row['id'] . "'>" . $row['nombre'] . "</option>";
+
+                                                                }
+
+                                                                ?>
+
+                                                            </select>
+
+                                                        </div>
+
+                                                    </div>

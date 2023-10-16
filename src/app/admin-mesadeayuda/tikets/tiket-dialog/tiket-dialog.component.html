@@ -1,0 +1,98 @@
+<h1 mat-dialog-title>Ticket</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+    <!-- <form autocomplete="off"> -->
+    <div mat-dialog-content> 
+        
+                <div fxLayout="row wrap" class="mt-2">
+                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Departamento</mat-label>
+                            <mat-select formControlName="DepartamentoId" (valueChange)="changeDeartamento($event)">
+                               
+                                <mat-option *ngFor="let departamento of dptos" [value]="departamento.DepartamentoId">
+                                    <span>{{departamento.Departamento}}</span>
+                                </mat-option>
+                            </mat-select> 
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Categoría</mat-label>
+                            <mat-select formControlName="CategoriaId"  (valueChange)="ChangeCategoria($event)">
+                                
+                                <mat-option *ngFor="let categoria of categorias" [value]="categoria.CategoriaId">
+                                    <span>{{categoria.Categoria}}</span>
+                                </mat-option>
+                            </mat-select> 
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Sub Categoría</mat-label>
+                            <mat-select formControlName="SubCategoriaId" (valueChange)="ChangeSubCategoria($event)">
+                                
+                                <mat-option *ngFor="let subcategoria of subcategorias" [value]="subcategoria.SubCategoriaId">
+                                    <span>{{subcategoria.SubCategoria}}</span>
+                                </mat-option>
+                            </mat-select> 
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Responsable</mat-label>
+                            <mat-select formControlName="ResponsableId" [disabled]="viewresponsable">
+                               
+                                <mat-option *ngFor="let responsable of responsables" [value]="responsable.UsuarioId">
+                                    <span>{{responsable.Correo}}</span>
+                                </mat-option>
+                            </mat-select> 
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Telefóno contacto</mat-label>
+                            <input matInput placeholder="8446076212" formControlName="ContactoTelefonico" required> 
+                            
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <ngx-mat-file-input placeholder="Subir Archivo" [formControl]="fileControl" [multiple]="multiple" [accept]="accept" [color]="color">
+                              <!-- <mat-icon ngxMatFileInputIcon>folder</mat-icon> -->
+                            </ngx-mat-file-input>
+                          </mat-form-field>
+                    </div>
+
+                   
+                    <div fxFlex="100" >
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Detalles</mat-label>
+                            <textarea matInput formControlName="Detalle"></textarea>
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="100" *ngIf="isnotNew">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Respuesta</mat-label>
+                            <textarea matInput formControlName="Respuesta"></textarea>
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="100" *ngIf="isnotNew" fxFlex.gt-sm="33.3" class="px-1">
+                        <mat-form-field *ngIf="showStatus" appearance="outline"  class="w-100">
+                            <mat-label>Estatus</mat-label>
+                            <mat-select formControlName="EstatusTiketId">
+                              <mat-option  *ngFor="let estatus of dataestatustiket" [value]="estatus.EstatusTiketId">
+                                {{estatus.Estatus}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>  
+       
+    </div>
+    <div mat-dialog-actions>
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100"> 
+            <button mat-raised-button color="warn" type="button" mat-dialog-close>Cerrar</button>
+            <button *ngIf="estaabierto" mat-raised-button color="primary" type="submit">Guardar</button>
+        </div> 
+    </div>
+</form>

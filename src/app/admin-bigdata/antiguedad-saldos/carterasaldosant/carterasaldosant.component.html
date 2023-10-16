@@ -1,0 +1,274 @@
+<button mat-button mat-mini-fab color="primary" printSectionId="print-section" 
+     ngxPrint #print [useExistingCss]="true" styleSheetFile="theme/styles/_admin.scss">
+     <mat-icon>cloud_download</mat-icon>
+ </button>
+ <button  style="margin-left: 5px;" mat-mini-fab (click)="Reload()"><mat-icon>autorenew</mat-icon></button> 
+ 
+<div id="print-section">
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="100" class="p-1"> 
+        <mat-card>
+            <mat-card-header fxLayoutAlign="center">                
+              <mat-card-subtitle><h3>Cartera por División</h3></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                
+                <div class="w-110 h-300p" #resizedDiv>
+                    <ngx-charts-advanced-pie-chart
+                    [scheme]="colorScheme2"
+                    [results]="data0"
+                    [animations]="false"
+                    [valueFormatting]="formator0"
+                    [percentageFormatting]="formatorPercentage"
+                    [gradient]="false"
+                    (select)="onSelect0($event)"
+                    
+                    
+                    >
+                </ngx-charts-advanced-pie-chart>   
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div></div>
+
+    <div fxLayout="row wrap">
+        <div fxFlex="100" fxFlex.gt-sm="100" class="p-1"> 
+            <mat-card>
+                <mat-card-header fxLayoutAlign="center">                
+                  <mat-card-subtitle><h3>Filtros</h3></mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+               
+          <div fxLayout="row wrap">
+               <div fxFlex="100" fxFlex.gt-sm="15" class="p-1"> 
+            <!-- <mat-form-field class="example-chip-list" > -->
+                        <mat-label>Divsión</mat-label>
+                        <mat-chip-list #chipGrid aria-label="Fruit selection">
+                          <mat-chip  (removed)="removeDivision()">
+                           <small> {{llenartextovaciofiltro(division)}}</small>
+                            <button matChipRemove [attr.aria-label]="'remove ' ">
+                              <mat-icon>cancel</mat-icon>
+                            </button>
+                          </mat-chip>
+                        </mat-chip-list>
+               </div>
+       
+            <div fxFlex="100" fxFlex.gt-sm="14" class="p-1"> 
+                        <mat-label>Antiguedad</mat-label>
+                        <mat-chip-list #chipGrid aria-label="Fruit selection">
+                          <mat-chip  (removed)="removeAntiguedad()">
+                            <small>{{llenartextovaciofiltro(antiguedad)}}</small>
+                            <button matChipRemove [attr.aria-label]="'remove ' ">
+                              <mat-icon>cancel</mat-icon>
+                            </button>
+                          </mat-chip>
+                        </mat-chip-list>
+            </div>
+             <div fxFlex="100" fxFlex.gt-sm="16" class="p-1"> 
+                        <mat-label>Oficina</mat-label>
+                        <mat-chip-list #chipGrid aria-label="Fruit selection">
+                          <mat-chip  (removed)="removeOficina()">
+                            <small>{{llenartextovaciofiltro(Oficina)}}</small>
+                            <button matChipRemove [attr.aria-label]="'remove ' ">
+                              <mat-icon>cancel</mat-icon>
+                            </button>
+                          </mat-chip>
+                        </mat-chip-list>
+            </div>
+            <div fxFlex="100" fxFlex.gt-sm="27" class="p-1"> 
+                        <mat-label>Asesor</mat-label>
+                        <mat-chip-list #chipGrid aria-label="Fruit selection">
+                          <mat-chip  (removed)="removeAsesor()">
+                            <small>{{llenartextovaciofiltro(asesor)}}</small>                            
+                            <button matChipRemove [attr.aria-label]="'remove ' ">
+                              <mat-icon>cancel</mat-icon>
+                            </button>
+                          </mat-chip>
+                        </mat-chip-list>
+            </div>
+            <div fxFlex="100" fxFlex.gt-sm="28" class="p-1"> 
+                        <mat-label>Cliente</mat-label>
+                        <mat-chip-list #chipGrid aria-label="Fruit selection">
+                          <mat-chip  (removed)="removeCliente()">
+                            <small>{{llenartextovaciofiltro(cliente)}}</small>
+                            <button matChipRemove [attr.aria-label]="'remove ' ">
+                              <mat-icon>cancel</mat-icon>
+                            </button>
+                          </mat-chip>
+                        </mat-chip-list>
+             </div>
+         </div>
+                       
+                      <!-- </mat-form-field> -->
+
+                 
+                </mat-card-content>
+            </mat-card>
+        </div></div>  
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="50" class="p-1"> 
+        <mat-card>
+            <mat-card-header fxLayoutAlign="center center">                
+                <mat-card-subtitle><h3>Cartera por antiguedad  </h3></mat-card-subtitle>
+            </mat-card-header>
+            <div class="w-110 h-300p" #resizedDiv>
+                <ngx-charts-bar-horizontal
+                    [animations]="false"
+                    [scheme]="colorScheme"
+                    [showDataLabel]="true"
+                    [results]="data"
+                    [gradient]="gradient"
+                    [xAxis]="showXAxis"
+                    [yAxis]="true"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="yAxisLabel"
+                    [yAxisLabel]="xAxisLabel"
+                    (select)="onSelect($event)"
+                   
+                    [dataLabelFormatting] = "formator"
+                    >
+                    
+                </ngx-charts-bar-horizontal>         
+            </div>
+        </mat-card>
+    </div>
+
+    <div fxFlex="100" fxFlex.gt-sm="50" class="p-1"> 
+        <mat-card>
+            <mat-card-header fxLayoutAlign="center center">                
+                <mat-card-subtitle><h3>Cartera por Oficina </h3></mat-card-subtitle>
+            </mat-card-header>
+            <div class="scroll-class" #chartArea (window:resize)="setViewSize()">
+                <ngx-charts-bar-vertical
+                   [view]="view3"
+                    [animations]="false"
+                    [scheme]="colorSchemeOficina"
+                    [showDataLabel]="true"
+                    [results]="data4"
+                    [gradient]="gradient"
+                    [xAxis]="true"
+                    [yAxis]="false"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="yAxisLabel"
+                    [yAxisLabel]="xAxisLabel"
+                    (select)="onSelectOficina($event)"
+                    [barPadding]="8"
+                    [dataLabelFormatting] = "formator"
+                    >
+                    
+                </ngx-charts-bar-vertical>         
+            </div>
+        </mat-card>
+ 
+    </div>
+</div>
+<div *ngIf="isLoading" 
+   style="display: flex; justify-content: center; align-items: center; background: white;">
+  <mat-progress-spinner 
+    color="primary" 
+    mode="indeterminate">
+  </mat-progress-spinner>
+</div> 
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="50" class="p-1"> 
+        <mat-card>
+            <mat-card-header fxLayoutAlign="center center">                
+                <mat-card-subtitle><h3>Cartera por Asesor  </h3></mat-card-subtitle>
+            </mat-card-header>
+            <div class="scroll-class" #chartArea (window:resize)="setViewSize()">
+                <ngx-charts-bar-vertical
+                   [view]="view"
+                    [animations]="false"
+                    [scheme]="colorSchemeAsesor"
+                    [showDataLabel]="true"
+                    [results]="data2"
+                    [gradient]="gradient"
+                    [xAxis]="true"
+                    [yAxis]="false"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="yAxisLabel"
+                    [yAxisLabel]="xAxisLabel"
+                    (select)="onSelectAsesor($event)"
+                    [barPadding]="8"
+                    [dataLabelFormatting] = "formator"
+                    >
+                    
+                </ngx-charts-bar-vertical>         
+            </div>
+        </mat-card>
+ 
+      </div>
+      <div fxFlex="100" fxFlex.gt-sm="50" class="p-1"> 
+        <mat-card>
+            <mat-card-header fxLayoutAlign="center center">                
+                <mat-card-subtitle><h3>Cartera por Cliente  </h3></mat-card-subtitle>
+            </mat-card-header>
+            <div class="scroll-class" #chartArea (window:resize)="setViewSize()">
+                <ngx-charts-bar-vertical
+                   [view]="view2"
+                    [animations]="false"
+                    [scheme]="colorSchemeCliente"
+                    [showDataLabel]="true"
+                    [results]="dataCliente"
+                    [gradient]="gradient"
+                    [xAxis]="true"
+                    [yAxis]="false"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="yAxisLabel"
+                    [yAxisLabel]="xAxisLabel"
+                    (select)="onSelectCliente($event)"
+                    [barPadding]="8"
+                    [dataLabelFormatting] = "formator"
+                    >
+                    
+                </ngx-charts-bar-vertical>         
+            </div>
+        </mat-card>
+
+      </div>
+
+</div>
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="100" class="p-1"> 
+        <mat-card>
+            <mat-card-header fxLayoutAlign="center center">                
+                <mat-card-subtitle><h3>Detalle por Factura {{division}}  {{antiguedad}} {{replacecatalaoficina(Oficina)}} {{replacecatalaoficina(asesor)}} {{replacecatalaoficina(cliente)}}</h3></mat-card-subtitle>
+            </mat-card-header>
+            <div class="mat-table admin-table">
+                <div class="mat-header-row"> 
+                    <div class="mat-header-cell">Factura</div>
+                    <div class="mat-header-cell">Rango</div>
+                    <div class="mat-header-cell">Días de retraso</div>
+                    <div class="mat-header-cell">Cliente</div>
+                    <div class="mat-header-cell">Cartera</div>
+                </div>
+                <div *ngFor="let element of facturasdet | paginate: { itemsPerPage: count, currentPage: page }" class="mat-row"> 
+                    <div class="mat-cell">{{element.Factura}}</div> 
+                    <div class="mat-cell">{{element.Rango}}</div> 
+                    <div class="mat-cell">{{element.Diasatrasados}}</div>
+                    <div class="mat-cell">{{element.Cliente}}</div>
+                    <div class="mat-cell" style="text-align: right;">{{element.Cartera | currency: '$'}}</div>
+                    
+                    
+                        
+                </div>
+            </div>
+            <div *ngIf="true" fxLayout="row wrap">
+                <div fxFlex="100"> 
+                    <mat-card class="p-0 text-center">           
+                        <pagination-controls class="product-pagination" autoHide="true" maxSize="5" (pageChange)="onPageChanged($event)"></pagination-controls>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
+</div>

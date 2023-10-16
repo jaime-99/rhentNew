@@ -1,0 +1,24 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 20%;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+h2{
+  text-align: center;
+}
+

@@ -1,0 +1,770 @@
+[
+    {
+        "id": 1,
+        "name": "Todas",
+        "hasSubCategory": true,
+        "parentId": 0
+    },
+    {
+        "id": 2,
+        "name": "Químico",
+        "hasSubCategory": true,
+        "parentId": 0
+    },
+    {
+        "id": 3,
+        "name": "Equipo",
+        "hasSubCategory": true,
+        "parentId": 0
+    },
+    {
+        "id": 4,
+        "name": "CCS",
+        "hasSubCategory": true,
+        "parentId": 0
+    },
+    {
+        "id": 5,
+        "name": "MPQ",
+        "hasSubCategory": true,
+        "parentId": 0
+    },
+    {
+        "id": 6,
+        "name": "Servicio",
+        "hasSubCategory": true,
+        "parentId": 0
+    },
+    {
+        "id": 7,
+        "name": "ADITIVO PARA LAVADO",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 8,
+        "name": "CONCENTRADOS",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 9,
+        "name": "CONTROL DE PLAGAS",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 10,
+        "name": "CUidADO E HIGIENE PERSONAL\t",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 11,
+        "name": "DETERGENTES ACidOS",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 12,
+        "name": "DETERGENTES ALCALINOS",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 13,
+        "name": "DETERGENTES NEUTRALES",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 14,
+        "name": "EQUIPOS DE MEDICION",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 15,
+        "name": "EQUIPOS PARA LIMPIEZA",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 16,
+        "name": "ESCALDADORES",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 17,
+        "name": "ESPECIALidADES",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 18,
+        "name": "ESPECIALidADES PARA RASTRO",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 19,
+        "name": "INDUSTRIA PECUARIA",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 20,
+        "name": "LAVANDERÍA",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 21,
+        "name": "LIMPIEZA CUARTOS FRÍOS",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 22,
+        "name": "LIMPIEZA DE ÁREAS DE SERVICIO",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 23,
+        "name": "LIMPIEZA DE METALES\t",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 24,
+        "name": "LINEA AGRÍCOLA",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 25,
+        "name": "LINEA FORTE GREEN",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 26,
+        "name": "LINEA SPECTRA",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 27,
+        "name": "MANTENIMIENTO DE DRENAJES",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 28,
+        "name": "MANTENIMIENTO DE TORRES DE ENFRIAMIENTO",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 29,
+        "name": "MATERIA PRIMA QUÍMICOS",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 30,
+        "name": "OTROS PRODUCTOS/SERVICIOS",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 31,
+        "name": "PROYECTOS ESPECIALES",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 32,
+        "name": "SANITIZANTES DE CONTACTO DIRECTO CON ALIMENTO",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 33,
+        "name": "SANITIZANTES GENERALES",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 34,
+        "name": "TINTAS Y DENATURANTES",
+        "hasSubCategory": true,
+        "parentId": 2
+    },
+    {
+        "id": 35,
+        "name": "CALZADO EN GENERAL",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 36,
+        "name": "CONTENEDORES",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 37,
+        "name": "CONTROL DE PLAGAS",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 38,
+        "name": "EQUIPO ABRASIVO\t",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 39,
+        "name": "EQUIPO DE BLOQUEO",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 40,
+        "name": "EQUIPO DE PROCESO",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 41,
+        "name": "EQUIPO DE PROTECCION PERSONAL",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 42,
+        "name": "EQUIPO DE SEÑALIZACION",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 43,
+        "name": "EQUIPO DE SERVICIO A LOS ALIMENTOS",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 44,
+        "name": "EQUIPO MEDICO",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 45,
+        "name": "EQUIPO PARA LAVANDERÍA",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 46,
+        "name": "EQUIPO DE EMERGENCIA",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 47,
+        "name": "EQUIPO DE MEDICION",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 48,
+        "name": "EQUIPO PARA LIMPIEZA",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 49,
+        "name": "GUANTES EN GENERAL",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 50,
+        "name": "HIGIENE PERSONAL",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 51,
+        "name": "OTROS PRODUCTOS/SERVICIOS",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 52,
+        "name": "PRODUCTOS HidRATANTES",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 53,
+        "name": "PROYECTOS ESPECIALES",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 54,
+        "name": "ROPA PARA TRABAJO",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 55,
+        "name": "SISTEMA PARA BAÑOS",
+        "hasSubCategory": true,
+        "parentId": 3
+    },
+    {
+        "id": 56,
+        "name": "EQUIPOS DE MEDICION",
+        "hasSubCategory": true,
+        "parentId": 4
+    },
+    {
+        "id": 57,
+        "name": "EQUIPOS PARA LIMPIEZA",
+        "hasSubCategory": true,
+        "parentId": 4
+    },
+    {
+        "id": 58,
+        "name": "MATERIA PRIMA QUÍMICOS",
+        "hasSubCategory": true,
+        "parentId": 5
+    },
+    {
+        "id": 59,
+        "name": "ADITIVO LAVADO DE BOTELLAS",
+        "hasSubCategory": false,
+        "parentId": 7
+    },
+    {
+        "id": 60,
+        "name": "CONCENTRADOS",
+        "hasSubCategory": false,
+        "parentId": 8
+    },
+    {
+        "id": 61,
+        "name": "CONTROL DE PLAGAS",
+        "hasSubCategory": false,
+        "parentId": 9
+    },
+    {
+        "id": 62,
+        "name": "MANOS SANITIZANTE SPRAY BOLSA\t",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 63,
+        "name": "MANOS JABON ESPUMA ANTIBACTERIAL GRANEL",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 64,
+        "name": "MANOS JABON LIQUidOS ANTIBACTERIAL GRANEL",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 65,
+        "name": "\tJABON PARA CUERPO",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 66,
+        "name": "LIMPIEZA Y SANITIZADO DE MANOS",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 67,
+        "name": "MANOS SANITIZANTE ESPUMA GRANEL",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 68,
+        "name": "CUidADO PERSONAL",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 69,
+        "name": "MANOS SANITIZANTE GEL GRANEL",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 70,
+        "name": "MANOS SANITIZANTE LIQUidO GRANEL",
+        "hasSubCategory": false,
+        "parentId": 10
+    },
+    {
+        "id": 71,
+        "name": "ÁCidOS CIP",
+        "hasSubCategory": false,
+        "parentId": 11
+    },
+    {
+        "id": 72,
+        "name": "ÁCidOS AUTOESPUMANTES",
+        "hasSubCategory": false,
+        "parentId": 11
+    },
+    {
+        "id": 73,
+        "name": "ALCALINOS CLORADOS AUTOESPUMANTES",
+        "hasSubCategory": false,
+        "parentId": 12
+    },
+    {
+        "id": 74,
+        "name": "ALCALINOS AUTOESPUMANTES",
+        "hasSubCategory": false,
+        "parentId": 12
+    },
+    {
+        "id": 75,
+        "name": "ALCALINOS CIP BAJA ESPUMA",
+        "hasSubCategory": false,
+        "parentId": 12
+    },
+    {
+        "id": 76,
+        "name": "ALCALINOS CIP CERO ESPUMA",
+        "hasSubCategory": false,
+        "parentId": 12
+    },
+    {
+        "id": 77,
+        "name": "NEUTROS AUTOESPUMANTES",
+        "hasSubCategory": false,
+        "parentId": 13
+    },
+    {
+        "id": 78,
+        "name": "NEUTROS CIP",
+        "hasSubCategory": false,
+        "parentId": 13
+    },
+    {
+        "id": 79,
+        "name": "SISTEMAS DE MUESTREO",
+        "hasSubCategory": false,
+        "parentId": 14
+    },
+    {
+        "id": 80,
+        "name": "EQ DOSIFICADORES Y APLIC. QUIM.",
+        "hasSubCategory": false,
+        "parentId": 15
+    },
+    {
+        "id": 81,
+        "name": "ESCALDADO DE PUERCOS",
+        "hasSubCategory": false,
+        "parentId": 16
+    },
+    {
+        "id": 82,
+        "name": "DETREGENTES OXIGENADOS",
+        "hasSubCategory": false,
+        "parentId": 17
+    },
+    {
+        "id": 83,
+        "name": "LIMPIEZA DE VÍCERAS",
+        "hasSubCategory": false,
+        "parentId": 18
+    },
+    {
+        "id": 84,
+        "name": "ROLAS; LIMPIEZA Y LUBRICACION",
+        "hasSubCategory": false,
+        "parentId": 18
+    },
+    {
+        "id": 85,
+        "name": "DEPILADO DE PATAS",
+        "hasSubCategory": false,
+        "parentId": 18
+    },
+    {
+        "id": 86,
+        "name": "PLANTAS DE RENDIMIENTO",
+        "hasSubCategory": false,
+        "parentId": 18
+    },
+    {
+        "id": 87,
+        "name": "SALUD ANIMAL",
+        "hasSubCategory": false,
+        "parentId": 19
+    },
+    {
+        "id": 88,
+        "name": "DETERGENTE",
+        "hasSubCategory": false,
+        "parentId": 20
+    },
+    {
+        "id": 89,
+        "name": "PRELAVADORES",
+        "hasSubCategory": false,
+        "parentId": 20
+    },
+    {
+        "id": 90,
+        "name": "AYUDAS DE PROCESO DE LAVADO\t",
+        "hasSubCategory": false,
+        "parentId": 20
+    },
+    {
+        "id": 91,
+        "name": "BLANQUEADOR OXIGENADO",
+        "hasSubCategory": false,
+        "parentId": 20
+    },
+    {
+        "id": 92,
+        "name": "SUAVIZANTES",
+        "hasSubCategory": false,
+        "parentId": 20
+    },
+    {
+        "id": 93,
+        "name": "CUARTOS FRÍOS",
+        "hasSubCategory": false,
+        "parentId": 21
+    },
+    {
+        "id": 94,
+        "name": "LIMPIEZA INSTITUCIONAL",
+        "hasSubCategory": false,
+        "parentId": 22
+    },
+    {
+        "id": 95,
+        "name": "LUBRICANTES",
+        "hasSubCategory": false,
+        "parentId": 23
+    },
+    {
+        "id": 96,
+        "name": "METALES POR INMERSION",
+        "hasSubCategory": false,
+        "parentId": 23
+    },
+    {
+        "id": 97,
+        "name": "DILUYENTES",
+        "hasSubCategory": false,
+        "parentId": 24
+    },
+    {
+        "id": 98,
+        "name": "SANITIZANTES GENERALES",
+        "hasSubCategory": false,
+        "parentId": 25
+    },
+    {
+        "id": 99,
+        "name": "SOLVENTES DIELÉCTRICOS",
+        "hasSubCategory": false,
+        "parentId": 25
+    },
+    {
+        "id": 100,
+        "name": "LINEA FORTE GREEN",
+        "hasSubCategory": false,
+        "parentId": 25
+    },
+    {
+        "id": 101,
+        "name": "INDUSTRIAL MECANICA",
+        "hasSubCategory": false,
+        "parentId": 25
+    },
+    {
+        "id": 102,
+        "name": "DESENGRASANTE P/MANOS",
+        "hasSubCategory": false,
+        "parentId": 25
+    },
+    {
+        "id": 103,
+        "name": "DESENGRASANTE ALCALINO",
+        "hasSubCategory": false,
+        "parentId": 25
+    },
+    {
+        "id": 104,
+        "name": "SOLVENTE",
+        "hasSubCategory": false,
+        "parentId": 25
+    },
+    {
+        "id": 105,
+        "name": "DETERGENTE ALCALINO\t",
+        "hasSubCategory": false,
+        "parentId": 25
+    },
+    {
+        "id": 106,
+        "name": "SPECTRA",
+        "hasSubCategory": false,
+        "parentId": 26
+    },
+    {
+        "id": 107,
+        "name": "DRENAJES TRATAMIENTO",
+        "hasSubCategory": false,
+        "parentId": 27
+    },
+    {
+        "id": 108,
+        "name": "MANTENIMIENTO DE TORRES DE ENFRIAMIENTO\t",
+        "hasSubCategory": false,
+        "parentId": 28
+    },
+    {
+        "id": 109,
+        "name": "MATERIA PRIMA QUÍMICOS",
+        "hasSubCategory": false,
+        "parentId": 29
+    },
+    {
+        "id": 110,
+        "name": "OTROS PRODUCTOS\t",
+        "hasSubCategory": false,
+        "parentId": 30
+    },
+    {
+        "id": 111,
+        "name": "PCTOS DE TRASPASO PENINSULA",
+        "hasSubCategory": false,
+        "parentId": 31
+    },
+    {
+        "id": 112,
+        "name": "PROYECTOS ESPECIALES",
+        "hasSubCategory": false,
+        "parentId": 31
+    },
+    {
+        "id": 113,
+        "name": "PCTOS DE TRASPASO CHIHUAHUA\t",
+        "hasSubCategory": false,
+        "parentId": 31
+    },
+    {
+        "id": 114,
+        "name": "BASE CLORURO DE CETIL PIRidINIO",
+        "hasSubCategory": false,
+        "parentId": 32
+    },
+    {
+        "id": 115,
+        "name": "BASE ÁCidO PERACÉTICO",
+        "hasSubCategory": false,
+        "parentId": 32
+    },
+    {
+        "id": 116,
+        "name": "VEGETALES; LIMPIEZA Y SANITIZACION",
+        "hasSubCategory": false,
+        "parentId": 32
+    },
+    {
+        "id": 117,
+        "name": "BASE ÁCidO LÁCTICO",
+        "hasSubCategory": false,
+        "parentId": 32
+    },
+    {
+        "id": 118,
+        "name": "BASE EXTRACTO CÍTRICO",
+        "hasSubCategory": false,
+        "parentId": 32
+    },
+    {
+        "id": 119,
+        "name": "BASE CLORITO DE SODIO",
+        "hasSubCategory": false,
+        "parentId": 32
+    },
+    {
+        "id": 120,
+        "name": "OXIGENADOS",
+        "hasSubCategory": false,
+        "parentId": 33
+    },
+    {
+        "id": 121,
+        "name": "CUATERNARIOS",
+        "hasSubCategory": false,
+        "parentId": 33
+    },
+    {
+        "id": 122,
+        "name": "APLICACIÓN POR ESPUMA",
+        "hasSubCategory": false,
+        "parentId": 33
+    },
+    {
+        "id": 123,
+        "name": "TOALLITAS HÚMEDAS",
+        "hasSubCategory": false,
+        "parentId": 33
+    },
+    {
+        "id": 124,
+        "name": "YODADOS",
+        "hasSubCategory": false,
+        "parentId": 33
+    },
+    {
+        "id": 125,
+        "name": "CLORADOS",
+        "hasSubCategory": false,
+        "parentId": 33
+    },
+    {
+        "id": 126,
+        "name": "SANITIZANTES GENERALES\t",
+        "hasSubCategory": false,
+        "parentId": 33
+    },
+    {
+        "id": 127,
+        "name": "DENATURANTES",
+        "hasSubCategory": false,
+        "parentId": 34
+    },
+    {
+        "id": 128,
+        "name": "TINTAS Y DENATURANTES",
+        "hasSubCategory": false,
+        "parentId": 34
+    }
+]

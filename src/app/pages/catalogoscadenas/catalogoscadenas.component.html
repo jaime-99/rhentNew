@@ -1,0 +1,61 @@
+<table class="table borderless" style="width: 100%;">
+    <tr>
+        <td colspan="5">
+            <div style="background-color:#FD720D" class="text-center div-catalogo-titulo">
+                <h2 style="color:white; padding: 5px;">División Negocios de Cadenas</h2>
+            </div>
+        </td>
+    </tr>
+</table>
+<div *ngIf="viewType == 'grid'" fxLayout="row wrap" class="products-wrapper">
+    <div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+        <mat-card class="product-item text-center">
+            
+            <a  class="image-link">
+                <img src="https://dikeninternational.com/mex/catalogos/img/cat-neg-de-cadenas-quimicos.jpg" alt="">
+            </a>
+            <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+            <a  class="title text-truncate">
+                Catálogo de Químicos División
+            </a>
+            <a  class="title text-truncate">
+                Negocios de Cadenas
+            </a>
+                                 
+            <div class="divider mt-2"></div>
+            <div class="icons">
+                <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga externa','PDF Catalogo Alimentos Quimicos',this.href]);" target="_blank" href="https://catalogos.dikeninternational.com/view/564818394/">Ver catálogo</a>
+                <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+            </div>
+        </mat-card>
+       
+       
+    </div>
+    <div  fxFlex="100"  [fxFlex.gt-sm]="viewCol"  fxFlex.sm="50" class="col">
+        <mat-card class="product-item text-center">
+            
+            <a  class="image-link">
+                <img src="https://dikeninternational.com/mex/catalogos/img/cat-neg%20de%20cadenas-equipos.jpg" alt="">
+            </a>
+            <!-- <h4 class="category text-muted">{{ ( appService.Data.categories | filterById : product.categoryId )?.name }}</h4>                                                                      -->
+            <a  class="title text-truncate">
+                Catálogo de Equipos División
+            </a>
+            <a  class="title text-truncate">
+                Negocios de Cadenas
+            </a>
+                                 
+            <div class="divider mt-2"></div>
+            <div class="icons">
+                <a mat-button color="primary" onclick="_gaq.push(['_trackEvent','Descarga externa','PDF Catálogo de Equipos División',this.href]);" target="_blank" href="https://catalogos.dikeninternational.com/view/554834891/">Ver catálogo</a>
+                <!-- <app-controls [product]="product" (onOpenProductDialog)="openProductDialog(product)"></app-controls> -->
+            </div>
+        </mat-card>
+       
+       
+    </div>
+    
+    <br>
+
+    
+    </div>

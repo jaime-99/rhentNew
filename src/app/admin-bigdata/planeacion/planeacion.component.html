@@ -1,0 +1,13 @@
+
+  
+<div class="p-1">
+      <full-calendar *ngIf='calendarVisible' [options]='calendarOptions'>
+        <ng-template #eventContent let-arg>
+          <b>{{ arg.timeText }}</b>
+          <!-- <i  [matTooltip]="arg.event.title">{{ arg.event.title }}</i> -->
+          <div [matTooltip]="replacehtmlwblc(arg.event.title)" style="text-align: center; margin-right: 5px;" [innerHTML]="arg.event.title"></div>
+        </ng-template>
+      </full-calendar>
+    </div>
+
+  

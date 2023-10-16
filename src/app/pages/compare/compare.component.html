@@ -1,0 +1,82 @@
+<mat-chip-list *ngIf="appService.Data.compareList.length == 0">
+    <mat-chip color="warn" selected="true">NO HAY PRODUCTOS PARA COMPARAR.</mat-chip>
+</mat-chip-list>
+
+<mat-card *ngIf="appService.Data.compareList?.length > 0" class="p-0">
+
+  <div class="mat-table compare-table">
+    <div class="mat-row">
+      <div class="mat-cell">
+          Imagen       
+      </div>
+      <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
+        <button mat-icon-button color="accent" class="remove" (click)="remove(product)"><mat-icon>close</mat-icon></button>
+        <img [src]="product.images[0].small" alt="">
+      </div>
+    </div>
+
+    <div class="mat-row">
+      <div class="mat-cell">
+        Nombre
+      </div>
+      <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
+        <a [routerLink]="['/productos', product.id, product.name]" class="product-name">{{product.name}}</a>
+      </div>
+    </div>
+
+    <div class="mat-row">
+      <div class="mat-cell">
+        Precio
+      </div>
+      <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
+        <b class="new-price">${{product.newPrice | number : '1.2-2'}}</b>
+      </div>
+    </div>
+
+    <div class="mat-row">
+      <div class="mat-cell">
+        Disponibilidad
+      </div>
+      <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
+          <b class="text-muted">{{ (product.availibilityCount > 0) ? 'In stock':'Unavailable'}}</b>
+      </div>
+    </div>
+
+    <div class="mat-row">
+      <div class="mat-cell">
+        rating
+      </div>
+      <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
+        <app-rating [ratingsCount]="product.ratingsCount" [ratingsValue]="product.ratingsValue"></app-rating>
+      </div>
+    </div>
+
+    <div class="mat-row">
+      <div class="mat-cell">
+        Descripción
+      </div>
+      <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
+        <!-- <span class="text-muted lh">{{product.description}}</span> -->
+        <div innerHTML="{{product.description}}"></div>
+      </div>
+    </div>
+
+    
+
+    
+
+    
+
+    <div class="mat-row">
+      <div class="mat-cell">
+        <button mat-raised-button color="warn" (click)="clear()">Limliar</button>
+      </div>
+      <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
+        <button mat-raised-button color="primary" class="add" (click)="addToCart(product)">
+          <mat-icon>shopping_cart</mat-icon>Agregar</button>
+      </div>
+    </div>
+
+  </div>
+  
+</mat-card>

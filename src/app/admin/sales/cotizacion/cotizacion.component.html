@@ -1,0 +1,94 @@
+<div class="p-1">
+    <mat-card class="p-0">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="w-100 p-2">
+            <h2>Cotizaciones</h2>
+        </div>
+        <mat-divider></mat-divider>
+        <!-- <table mat-table [dataSource]="cotizaciones" matSort class="mat-elevation-z8">
+
+
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+              <td mat-cell *matCellDef="let element"> {{element.CotizacionId}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="cliente">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Cliente </th>
+              <td mat-cell *matCellDef="let element"> {{element.Cliente}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="total">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Total </th>
+              <td mat-cell *matCellDef="let element"> {{element.Total}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="estado">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+              <td mat-cell *matCellDef="let element"> {{element.Estado}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="probabilidad">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Probabilidad </th>
+                <td mat-cell *matCellDef="let element"> {{element.Probabilidad}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="fechacierre">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha Cierre </th>
+                <td mat-cell *matCellDef="let element"> {{element.FechaCierre}} </td>
+              </ng-container>
+              <ng-container matColumnDef="estado">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+                <td mat-cell *matCellDef="let element"> {{element.Estado}} </td>
+              </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table> -->
+
+
+         <div class="mat-table admin-table ">
+            <div class="mat-header-row">
+                <div class="mat-header-cell mat-column-id">#</div>
+                <div class="mat-header-cell mat-column-username">Clente</div>
+                <div class="mat-header-cell mat-column-total">Total</div>
+                <div class="mat-header-cell mat-column-10">Estado</div>
+                <div class="mat-header-cell mat-column-total">Prob.</div>
+                <div class="mat-header-cell mat-column-10">Fecha Cierre </div>
+                <div class="mat-header-cell mat-column-10">Fecha Caduca </div>
+                <div class="mat-header-cell mat-column-10">Doc. NetSuite</div>
+                <div class="mat-header-cell mat-column-10">Acciones</div>
+            </div>
+            <div *ngFor="let cotizacion of cotizaciones | paginate: { itemsPerPage: count, currentPage: page }" class="mat-row">
+                <div class="mat-cell mat-column-id">{{cotizacion.CotizacionId}}</div>
+                <div class="mat-cell mat-column-username">{{cotizacion.Cliente}}</div>
+                <div class="mat-cell mat-column-total">{{cotizacion.Total}}</div>
+                <div class="mat-cell mat-column-10">{{cotizacion.Estado}}</div>
+                <div class="mat-cell mat-column-total">{{cotizacion.Probabilidad}}</div>
+                <div class="mat-cell mat-column-10">{{cotizacion.FechaCierrePrevisto}}</div>
+                <div class="mat-cell mat-column-10">{{cotizacion.FechaCaduca}}</div>
+                <div class="mat-cell mat-column-10">{{cotizacion.NS_TranId}}</div>
+                <div class="mat-cell mat-column-10">
+                    <div class="p-1 actions">
+                        <button mat-mini-fab color="primary" matTooltip="View">
+                            <mat-icon>remove_red_eye</mat-icon>
+                        </button>
+                        <button mat-mini-fab color="warn" matTooltip="Ver detalle" class="btn-invoice">
+                            <mat-icon>receipt</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+
+    <div *ngIf="cotizaciones.length > 0" fxLayout="row wrap">
+        <div fxFlex="100">
+            <mat-card class="p-0 text-center">
+                <pagination-controls class="product-pagination" autoHide="true" maxSize="5" (pageChange)="onPageChanged($event)"></pagination-controls>
+            </mat-card>
+        </div>
+    </div>
+</div>
